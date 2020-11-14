@@ -12,7 +12,13 @@ namespace CafeManagementSystem.model
         public Account()
         {
         }
-
+        public Account(string username, string password, int userRole, int employeeId)
+        {
+            this.username = username;
+            this.password = password;
+            this.userRole = userRole;
+            this.employeeId = employeeId;
+        }
         public Account(int id, string username, string password, int userRole, int employeeId)
         {
             this.id = id;
@@ -27,5 +33,10 @@ namespace CafeManagementSystem.model
         public string Password { get => password; set => password = value; }
         public int UserRole { get => userRole; set => userRole = value; }
         public int EmployeeId { get => employeeId; set => employeeId = value; }
+
+        public override string ToString()
+        {
+            return id + " " + username + " " + password + " " + userRole + " " + employeeId;
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace CafeManagementSystem
 {
-    partial class MainForm
+    partial class TestForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // MainForm
+            // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "MainForm";
-            this.Text = "Cafe Management System";
-            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Name = "TestForm";
+            this.Text = "TestForm";
+            this.Load += new System.EventHandler(this.TestForm_Load);
             this.ResumeLayout(false);
 
         }
@@ -45,4 +45,3 @@
         #endregion
     }
 }
-

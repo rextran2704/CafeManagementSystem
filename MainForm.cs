@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CafeManagementSystem.dao;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace CafeManagementSystem
         public MainForm()
         {
             InitializeComponent();
+          
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }
