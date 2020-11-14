@@ -9,13 +9,13 @@ namespace CafeManagementSystem.dao
 {
     class DatabaseInfo
     {
-        private static string dbInfo;
+        private static string info;
 
-        public static string DbInfo()
+        public static string Info()
         {
             string filePath = Path.Combine(Environment.CurrentDirectory, "database-info.txt"); 
-            dbInfo = System.IO.File.ReadAllText(filePath);
-            return dbInfo;
+            info = System.IO.File.ReadAllText(filePath);
+            return info;
         }
     }
 }
