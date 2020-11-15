@@ -68,8 +68,6 @@ namespace CafeManagementSystem.dao
         }
         public bool AddAccount(Account account)
         {
-            try
-            {
                 int nRows;
                 Dao dao = new Dao();
                 string sqlStatement = "INSERT INTO Account(Username, Password, Userrole, EmployeeID) VALUES (@username, @password, @userRole, @employeeId)";
@@ -84,18 +82,10 @@ namespace CafeManagementSystem.dao
                 }
                 dao.Con.Close();
                 return nRows > 0;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return false;
-            }
         }
 
         public bool UpdateAccount(Account account)
         {
-            try
-            {
                 int nRows;
                 Dao dao = new Dao();
                 string sqlStatement = "UPDATE Account SET Password=@password, UserRole=@userRole, EmployeeID=@employeeId WHERE Username=@username";
@@ -110,18 +100,10 @@ namespace CafeManagementSystem.dao
                 }
                 dao.Con.Close();
                 return (nRows > 0);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return false;
-            }
         }
 
         public bool CheckLogin(string username, string password)
         {
-            try
-            {
                 Dao dao = new Dao();
                 string sqlStatement = "SELECT password FROM Account WHERE username='" + username + "'";
                 System.Data.SqlClient.SqlDataReader reader = dao.Get(sqlStatement);
@@ -132,12 +114,6 @@ namespace CafeManagementSystem.dao
                 }
                 dao.Con.Close();
                 return false;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return false;
-            }
         }
     }
 }
