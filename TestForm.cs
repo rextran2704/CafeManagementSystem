@@ -1,13 +1,4 @@
-﻿using CafeManagementSystem.dao;
-using CafeManagementSystem.model;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace CafeManagementSystem
@@ -21,18 +12,28 @@ namespace CafeManagementSystem
 
         private void TestForm_Load(object sender, EventArgs e)
         {
-            AccountDao dao = new AccountDao();
-            
-            string result = dao.RemoveAccount("testuser").ToString();
-            MessageBox.Show(result);
-            List<Account> accountList = dao.GetAccountList();
-            string s = "";
-            accountList.ForEach(curaccount =>
-            {
-                s += curaccount.ToString() + "\n";
-            });
-            MessageBox.Show(s);
-            
+            //AccountDao dao = new AccountDao();
+
+            //string result = dao.RemoveAccount("testuser").ToString();
+            //MessageBox.Show(result);
+            //List<Account> accountList = dao.GetAccountList();
+            //string s = "";
+            //accountList.ForEach(curaccount =>
+            //{
+            //    s += curaccount.ToString() + "\n";
+            //});
+            //MessageBox.Show(s);
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //AccountDao ad = new AccountDao();
+            //Account a = new Account("phuong ngu", "123", 2, 6);
+
+            //if (ad.CheckLogin("hai", "123") == true) { MessageBox.Show("oke nha"); }
+            //else { MessageBox.Show("ko oke nha"); }
+
         }
     }
 }
