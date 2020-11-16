@@ -243,6 +243,7 @@
             // panelChildForm
             // 
             this.panelChildForm.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(25)))), ((int)(((byte)(54)))));
             this.panelChildForm.Controls.Add(this.pictureBox2);
             this.panelChildForm.Location = new System.Drawing.Point(256, 0);
             this.panelChildForm.Name = "panelChildForm";
