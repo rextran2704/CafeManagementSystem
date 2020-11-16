@@ -10,6 +10,15 @@
         private string description;
         private int categoryID;
 
+        public Product(string productName, double price, int quantity, string image, string description, int categoryID)
+        {
+            this.productName = productName;
+            this.price = price;
+            this.quantity = quantity;
+            this.image = image;
+            this.description = description;
+            this.categoryID = categoryID;
+        }
         public Product(int productID, string productName, double price, int quantity, string image, string description, int categoryID)
         {
             this.productID = productID;
