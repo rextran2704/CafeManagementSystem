@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangePassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassForm.Designer.cs">
+      <DependentUpon>ChangePassForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="dao\CategoryDao.cs" />
     <Compile Include="dao\PaymentDao.cs" />
     <Compile Include="dao\ReceiptDao.cs" />
@@ -55,12 +61,6 @@
     <Compile Include="dao\Dao.cs" />
     <Compile Include="dao\DatabaseInfo.cs" />
     <Compile Include="dao\ReceiptDetailDao.cs" />
-    <Compile Include="FormTaiKhoan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTaiKhoan.Designer.cs">
-      <DependentUpon>FormTaiKhoan.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,8 +88,8 @@
     <Compile Include="TestForm.Designer.cs">
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormTaiKhoan.resx">
-      <DependentUpon>FormTaiKhoan.cs</DependentUpon>
+    <EmbeddedResource Include="ChangePassForm.resx">
+      <DependentUpon>ChangePassForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

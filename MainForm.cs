@@ -11,8 +11,8 @@ namespace CafeManagementSystem
             InitializeComponent();
             this.KeyPreview = true;
         }
-   
-       
+
+
         private void MainForm_Load(object sender, EventArgs e)
         {
             this.TopMost = true;
@@ -50,16 +50,23 @@ namespace CafeManagementSystem
             }
         }
 
-        private void orderToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        void openChildForm(Form orderForm){
             this.mainPanel.Controls.Clear();
-            Form orderForm = new OrderForm();
             orderForm.TopLevel = false;
             orderForm.AutoScroll = true;
             this.mainPanel.Controls.Add(orderForm);
             orderForm.FormBorderStyle = FormBorderStyle.None;
             orderForm.Dock = DockStyle.Fill;
             orderForm.Show();
+        }
+        private void orderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new OrderForm());
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ChangePassForm());
         }
     }
 }

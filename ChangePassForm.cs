@@ -10,16 +10,15 @@ using System.Windows.Forms;
 
 namespace CafeManagementSystem
 {
-    public partial class FormTaiKhoan : Form
+    public partial class ChangePassForm : Form
     {
-        public FormTaiKhoan()
+        public ChangePassForm()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
         }
     }
 }
