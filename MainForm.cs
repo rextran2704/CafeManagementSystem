@@ -11,19 +11,8 @@ namespace CafeManagementSystem
             InitializeComponent();
             this.KeyPreview = true;
         }
-        private Form activeForm = null;
-        void openChildForm(Form childForm) {
-            if (activeForm != null)
-                activeForm.Close();
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panelChildForm.Controls.Add(childForm);
-            panelChildForm.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-        }
+   
+       
         private void MainForm_Load(object sender, EventArgs e)
         {
             this.TopMost = true;

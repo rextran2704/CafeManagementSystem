@@ -124,35 +124,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Folder Include="images\" />
-=======
-    <None Include="Resources\staff.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\accounting.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\receipt.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\boy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\staff %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\staff-people-group-in-a-circular-arrow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\team.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fast-food.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\romantic-dinner.png" />
->>>>>>> f4cd1fe66cabe61a8ae10b4a5abef44a80395bb4
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
