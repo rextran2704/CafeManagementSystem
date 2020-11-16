@@ -18,8 +18,8 @@ namespace CafeManagementSystem.dao
                 int emID = reader.GetInt32(0);
                 int tablenumber= reader.GetInt32(1);
                 DateTime date= reader.GetDateTime(2);
-                double total= reader.GetDouble(3);
-                double addFee= reader.GetDouble(4);
+                double total= (double)reader.GetDecimal(3);
+                double addFee = (double)reader.GetDecimal(4);
                 Receipt = new Receipt(id, emID, tablenumber, date, total, addFee);
             }
             dao.Con.Close();
@@ -38,8 +38,8 @@ namespace CafeManagementSystem.dao
                 int emID = reader.GetInt32(1);
                 int tablenumber = reader.GetInt32(2);
                 DateTime date = reader.GetDateTime(3);
-                double total = reader.GetDouble(4);
-                double addFee = reader.GetDouble(5);
+                double total = (double)reader.GetDecimal(4);
+                double addFee = (double)reader.GetDecimal(5);
                 ReceiptList.Add(new Receipt(reID, emID, tablenumber, date, total, addFee));
             }
             dao.Con.Close();

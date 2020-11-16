@@ -11,6 +11,14 @@ namespace CafeManagementSystem.model
         private double total;
         private double additionalFee;
 
+        public Receipt(int employeeID, int tableNumber, DateTime printDate, double total, double additionalFee)
+        {
+            this.employeeID = employeeID;
+            this.tableNumber = tableNumber;
+            this.printDate = printDate;
+            this.total = total;
+            this.additionalFee = additionalFee;
+        }
         public Receipt(int receiptID, int employeeID, int tableNumber, DateTime printDate, double total, double additionalFee)
         {
             this.receiptID = receiptID;

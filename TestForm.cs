@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CafeManagementSystem.dao;
+using CafeManagementSystem.model;
+using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace CafeManagementSystem
@@ -12,10 +15,20 @@ namespace CafeManagementSystem
 
         private void TestForm_Load(object sender, EventArgs e)
         {
-            //AccountDao dao = new AccountDao();
+            //ReceiptDao dao = new ReceiptDao();
+            //Receipt a = new Receipt(3, 4, 1, DateTime.Today, 123, 100000);
 
-            //string result = dao.RemoveAccount("testuser").ToString();
-            //MessageBox.Show(result);
+            //Receipt b = dao.GetReceiptByName("123");
+            //List<Receipt> l = dao.GetReceiptList();
+            //bool b = dao.RemoveReceiptByName("123");
+
+            //MessageBox.Show("as " + dao.UpdateReceipt(a));
+
+
+
+
+
+
             //List<Account> accountList = dao.GetAccountList();
             //string s = "";
             //accountList.ForEach(curaccount =>
@@ -23,7 +36,7 @@ namespace CafeManagementSystem
             //    s += curaccount.ToString() + "\n";
             //});
             //MessageBox.Show(s);
-           
+
         }
 
         private void button1_Click(object sender, EventArgs e)

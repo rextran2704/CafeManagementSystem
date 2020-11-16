@@ -16,7 +16,7 @@ namespace CafeManagementSystem.dao
             if (reader.Read())
             {
                 int id = reader.GetInt32(0);
-                double price= reader.GetDouble(1);
+                double price= (double)reader.GetDecimal(1);
                 int quantity= reader.GetInt32(2);
                 string image= reader.GetString(3);
                 string description= reader.GetString(4);
@@ -37,7 +37,7 @@ namespace CafeManagementSystem.dao
             {
                 int id = reader.GetInt32(0);
                 string name = reader.GetString(1);
-                double price = reader.GetDouble(2);
+                double price = (double)reader.GetDecimal(2);
                 int quantity = reader.GetInt32(3);
                 string image = reader.GetString(4);
                 string description = reader.GetString(5);
@@ -82,19 +82,20 @@ namespace CafeManagementSystem.dao
                     command.CommandText = sqlStatement;
                     command.Parameters.AddWithValue("@name", Product.ProductName);
                     command.Parameters.AddWithValue("@price", Product.Price);
-                    command.Parameters.AddWithValue("@quantiy", Product.Quantity);
+                    command.Parameters.AddWithValue("@quantity", Product.Quantity);
                     command.Parameters.AddWithValue("@image", Product.Image);
                     command.Parameters.AddWithValue("@description", Product.Description);
                     command.Parameters.AddWithValue("@categoryID", Product.CategoryID);
                     nRows = command.ExecuteNonQuery();
                 }
                 dao.Con.Close();
-                return nRows > 0;
+                return nRows> 0;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 return false;
+                
             }
         }
 

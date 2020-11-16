@@ -12,6 +12,15 @@ namespace CafeManagementSystem.model
         private string address;
         private string phoneNumber;
 
+        public Employee(string employeeName, bool gender, string position, DateTime startDate, string address, string phoneNumber)
+        {
+            this.employeeName = employeeName;
+            this.gender = gender;
+            this.position = position;
+            this.startDate = startDate;
+            this.address = address;
+            this.phoneNumber = phoneNumber;
+        }
         public Employee(int employeeID, string employeeName, bool gender, string position, DateTime startDate, string address, string phoneNumber)
         {
             this.employeeID = employeeID;
