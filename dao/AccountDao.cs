@@ -7,7 +7,7 @@ namespace CafeManagementSystem.dao
 {
     class AccountDao
     {
-        public Account GetAccount(string username)
+        public Account GetAccountByUsername(string username)
         {
             Account account = null;
             Dao dao = new Dao();
@@ -44,7 +44,7 @@ namespace CafeManagementSystem.dao
             return accountList;
         }
 
-        public bool RemoveAccount(string username)
+        public bool RemoveAccountByUsername(string username)
         {
             try
             {
@@ -68,52 +68,68 @@ namespace CafeManagementSystem.dao
         }
         public bool AddAccount(Account account)
         {
-                int nRows;
-                Dao dao = new Dao();
-                string sqlStatement = "INSERT INTO Account(Username, Password, Userrole, EmployeeID) VALUES (@username, @password, @userRole, @employeeId)";
-                using (SqlCommand command = dao.Add(sqlStatement))
-                {
-                    command.CommandText = sqlStatement;
-                    command.Parameters.AddWithValue("@username", account.Username);
-                    command.Parameters.AddWithValue("@password", account.Password);
-                    command.Parameters.AddWithValue("@userRole", account.UserRole);
-                    command.Parameters.AddWithValue("@employeeId", account.EmployeeId);
-                    nRows = command.ExecuteNonQuery();
-                }
-                dao.Con.Close();
-                return nRows > 0;
+            int nRows;
+            Dao dao = new Dao();
+            string sqlStatement = "INSERT INTO Account(Username, Password, Userrole, EmployeeID) VALUES (@username, @password, @userRole, @employeeId)";
+            using (SqlCommand command = dao.Add(sqlStatement))
+            {
+                command.CommandText = sqlStatement;
+                command.Parameters.AddWithValue("@username", account.Username);
+                command.Parameters.AddWithValue("@password", account.Password);
+                command.Parameters.AddWithValue("@userRole", account.UserRole);
+                command.Parameters.AddWithValue("@employeeId", account.EmployeeId);
+                nRows = command.ExecuteNonQuery();
+            }
+            dao.Con.Close();
+            return nRows > 0;
         }
 
         public bool UpdateAccount(Account account)
         {
-                int nRows;
-                Dao dao = new Dao();
-                string sqlStatement = "UPDATE Account SET Password=@password, UserRole=@userRole, EmployeeID=@employeeId WHERE Username=@username";
-                using (SqlCommand command = dao.Update(sqlStatement))
-                {
-                    command.CommandText = sqlStatement;
-                    command.Parameters.AddWithValue("@username", account.Username);
-                    command.Parameters.AddWithValue("@password", account.Password);
-                    command.Parameters.AddWithValue("@userRole", account.UserRole);
-                    command.Parameters.AddWithValue("@employeeId", account.EmployeeId);
-                    nRows = command.ExecuteNonQuery();
-                }
-                dao.Con.Close();
-                return (nRows > 0);
+            int nRows;
+            Dao dao = new Dao();
+            string sqlStatement = "UPDATE Account SET Password=@password, UserRole=@userRole, EmployeeID=@employeeId WHERE Username=@username";
+            using (SqlCommand command = dao.Update(sqlStatement))
+            {
+                command.CommandText = sqlStatement;
+                command.Parameters.AddWithValue("@username", account.Username);
+                command.Parameters.AddWithValue("@password", account.Password);
+                command.Parameters.AddWithValue("@userRole", account.UserRole);
+                command.Parameters.AddWithValue("@employeeId", account.EmployeeId);
+                nRows = command.ExecuteNonQuery();
+            }
+            dao.Con.Close();
+            return (nRows > 0);
+        }
+
+        public bool ChangePasswordAccount(string username, string newPassword)
+        {
+            int nRows;
+            Dao dao = new Dao();
+            string sqlStatement = "UPDATE Account SET Password=@password WHERE Username=@username";
+            using (SqlCommand command = dao.Update(sqlStatement))
+            {
+                command.CommandText = sqlStatement;
+                command.Parameters.AddWithValue("@username", username);
+                command.Parameters.AddWithValue("@password", newPassword);
+                nRows = command.ExecuteNonQuery();
+            }
+            dao.Con.Close();
+            return (nRows > 0);
         }
 
         public bool CheckLogin(string username, string password)
         {
-                Dao dao = new Dao();
-                string sqlStatement = "SELECT password FROM Account WHERE username='" + username + "'";
-                System.Data.SqlClient.SqlDataReader reader = dao.Get(sqlStatement);
-                if (reader.Read())
-                {
-                    string dbPassword = reader.GetString(0);
-                    return (password.Equals(dbPassword));
-                }
-                dao.Con.Close();
-                return false;
+            Dao dao = new Dao();
+            string sqlStatement = "SELECT password FROM Account WHERE username='" + username + "'";
+            System.Data.SqlClient.SqlDataReader reader = dao.Get(sqlStatement);
+            if (reader.Read())
+            {
+                string dbPassword = reader.GetString(0);
+                return (password.Equals(dbPassword));
+            }
+            dao.Con.Close();
+            return false;
         }
     }
 }
