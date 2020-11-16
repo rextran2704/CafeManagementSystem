@@ -46,12 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dao\CategoryDao.cs" />
+    <Compile Include="dao\PaymentDao.cs" />
     <Compile Include="dao\ReceiptDao.cs" />
     <Compile Include="dao\ProductDao.cs" />
     <Compile Include="dao\EmployeeDao.cs" />
     <Compile Include="dao\AccountDao.cs" />
     <Compile Include="dao\Dao.cs" />
     <Compile Include="dao\DatabaseInfo.cs" />
+    <Compile Include="dao\ReceiptDetailDao.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

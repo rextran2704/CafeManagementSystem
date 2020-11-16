@@ -7,6 +7,13 @@
         private int quantity;
         private double total;
 
+        public ReceiptDetail(int productID, int quantity, double total)
+        {
+            this.productID = productID;
+            this.quantity = quantity;
+            this.total = total;
+        }
+
         public ReceiptDetail(int receiptID, int productID, int quantity, double total)
         {
             this.receiptID = receiptID;
