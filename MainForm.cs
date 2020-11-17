@@ -1,4 +1,5 @@
 ﻿using CafeManagementSystem.dao;
+using CafeManagementSystem.model;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -7,6 +8,8 @@ namespace CafeManagementSystem
 {
     public partial class MainForm : Form
     {
+        private Account User = null;
+
         public MainForm()
         {
             InitializeComponent();
@@ -28,7 +31,13 @@ namespace CafeManagementSystem
             //MessageBox.Show("Login Action");
             AccountDao AcDAO = new AccountDao();
             bool LoginSuccess = AcDAO.CheckLogin(txtUsername.Text, txtPassword.Text);
-            if (LoginSuccess) MessageBox.Show("LoginSuccess");
+            if (LoginSuccess) { 
+                MessageBox.Show("LoginSuccess");
+                User = AcDAO.GetAccountByUsername(txtUsername.Text);
+                txtUsername.Text = "";
+                txtPassword.Text = "";
+                welcomeToolStripMenuItem.Text = User.Username;
+            }
             else MessageBox.Show("LoginFailed");
         }
 
