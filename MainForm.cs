@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CafeManagementSystem.dao;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -24,7 +25,11 @@ namespace CafeManagementSystem
 
         private void Login()
         {
-            MessageBox.Show("Login Action");
+            //MessageBox.Show("Login Action");
+            AccountDao AcDAO = new AccountDao();
+            bool LoginSuccess = AcDAO.CheckLogin(txtUsername.Text, txtPassword.Text);
+            if (LoginSuccess) MessageBox.Show("LoginSuccess");
+            else MessageBox.Show("LoginFailed");
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
