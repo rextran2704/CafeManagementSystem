@@ -110,5 +110,20 @@ namespace CafeManagementSystem
         {
             openChildForm(new AccountForm());
         }
+
+        private void generalReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new GeneralReportForm());
+        }
+
+        private void paymentReportToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            openChildForm(new PaymentReportForm());
+        }
+
+        private void incomeReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new IncomeReportForm());
+        }
     }
 }

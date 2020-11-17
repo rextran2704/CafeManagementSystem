@@ -79,6 +79,24 @@
     <Compile Include="EmployeeForm.Designer.cs">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IncomeReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncomeReportForm.Designer.cs">
+      <DependentUpon>IncomeReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentReportForm.Designer.cs">
+      <DependentUpon>PaymentReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralReportForm.Designer.cs">
+      <DependentUpon>GeneralReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +130,9 @@
     <Compile Include="TestForm.Designer.cs">
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AccountForm.resx">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CategoryForm.resx">
       <DependentUpon>CategoryForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +141,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncomeReportForm.resx">
+      <DependentUpon>IncomeReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentReportForm.resx">
+      <DependentUpon>PaymentReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralReportForm.resx">
+      <DependentUpon>GeneralReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
