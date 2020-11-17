@@ -43,10 +43,15 @@
             this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colQuantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.monanLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.monanLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -60,6 +65,7 @@
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.splitContainer1.Panel1.Controls.Add(this.monanLayoutPanel);
             this.splitContainer1.Panel1.Controls.Add(this.btnSearch);
             this.splitContainer1.Panel1.Controls.Add(this.txtSearch);
             // 
@@ -85,7 +91,7 @@
             this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSearch.Location = new System.Drawing.Point(272, 45);
+            this.btnSearch.Location = new System.Drawing.Point(297, 45);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(0);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(50, 37);
@@ -97,7 +103,7 @@
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(11, 45);
+            this.txtSearch.Location = new System.Drawing.Point(36, 45);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(271, 37);
@@ -107,7 +113,7 @@
             // 
             this.btnCalculate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCalculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalculate.Location = new System.Drawing.Point(509, 688);
+            this.btnCalculate.Location = new System.Drawing.Point(510, 688);
             this.btnCalculate.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(192, 54);
@@ -147,7 +153,7 @@
             this.txtTableNumber.Location = new System.Drawing.Point(291, 116);
             this.txtTableNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtTableNumber.Name = "txtTableNumber";
-            this.txtTableNumber.Size = new System.Drawing.Size(282, 37);
+            this.txtTableNumber.Size = new System.Drawing.Size(283, 37);
             this.txtTableNumber.TabIndex = 2;
             // 
             // label1
@@ -173,7 +179,7 @@
             this.txtTotal.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(367, 37);
+            this.txtTotal.Size = new System.Drawing.Size(368, 37);
             this.txtTotal.TabIndex = 2;
             // 
             // lblTotal
@@ -203,7 +209,7 @@
             this.lsvOrder.Location = new System.Drawing.Point(64, 215);
             this.lsvOrder.Margin = new System.Windows.Forms.Padding(2);
             this.lsvOrder.Name = "lsvOrder";
-            this.lsvOrder.Size = new System.Drawing.Size(676, 371);
+            this.lsvOrder.Size = new System.Drawing.Size(677, 371);
             this.lsvOrder.TabIndex = 0;
             this.lsvOrder.UseCompatibleStateImageBehavior = false;
             this.lsvOrder.View = System.Windows.Forms.View.Details;
@@ -225,6 +231,44 @@
             this.colTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colTotal.Width = 177;
             // 
+            // monanLayoutPanel
+            // 
+            this.monanLayoutPanel.AutoScroll = true;
+            this.monanLayoutPanel.Controls.Add(this.button1);
+            this.monanLayoutPanel.Controls.Add(this.button2);
+            this.monanLayoutPanel.Controls.Add(this.button3);
+            this.monanLayoutPanel.Location = new System.Drawing.Point(8, 116);
+            this.monanLayoutPanel.Name = "monanLayoutPanel";
+            this.monanLayoutPanel.Size = new System.Drawing.Size(376, 691);
+            this.monanLayoutPanel.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 100);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(121, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(112, 100);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(239, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(112, 100);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,6 +285,7 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.monanLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -261,5 +306,9 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.FlowLayoutPanel monanLayoutPanel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
