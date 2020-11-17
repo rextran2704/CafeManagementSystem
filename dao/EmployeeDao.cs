@@ -7,13 +7,33 @@ namespace CafeManagementSystem.dao
 {
     class EmployeeDao
     {
-        public Employee GetEmployeeByName(string Name)
+        public Employee GetEmployeeByID(int id)
         {
             Employee employee= null;
             Dao dao = new Dao();
-            string sqlStatement = "SELECT EmployeeID, Gender, Position, StartDate, Address, PhoneNumber FROM Employee WHERE EmployeeName='" + Name + "'";
+            string sqlStatement = "SELECT EmployeeName, Gender, Position, StartDate, Address, PhoneNumber FROM Employee WHERE EmployeeID='" + id + "'";
             System.Data.SqlClient.SqlDataReader reader = dao.Get(sqlStatement);
             if (reader.Read())
+            {
+                string name = reader.GetString(0);
+                bool gender = reader.GetBoolean(1);
+                string position = reader.GetString(2);
+                DateTime date = reader.GetDateTime(3);
+                string address = reader.GetString(4);
+                string phone = reader.GetString(5);
+                employee = new Employee(id, name, gender, position, date, address, phone);
+            }
+            dao.Con.Close();
+            return employee;
+        }
+
+        public List<Employee> SearchEmployeeByName(string name)
+        {
+            List<Employee> employeeList = new List<Employee>();
+            Dao dao = new Dao();
+            string sqlStatement = "SELECT EmployeeID, Gender, Position, StartDate, Address, PhoneNumber From Employee WHERE EmployeeName LIKE N'%" + name + "%'";
+            System.Data.SqlClient.SqlDataReader reader = dao.Get(sqlStatement);
+            while (reader.Read())
             {
                 int id = reader.GetInt32(0);
                 bool gender = reader.GetBoolean(1);
@@ -21,10 +41,10 @@ namespace CafeManagementSystem.dao
                 DateTime date = reader.GetDateTime(3);
                 string address = reader.GetString(4);
                 string phone = reader.GetString(5);
-                employee = new Employee(id, Name, gender, position, date, address, phone);
+                employeeList.Add(new Employee(id, name, gender, position, date, address, phone));
             }
             dao.Con.Close();
-            return employee;
+            return employeeList;
         }
         public List<Employee> GetEmployeeList()
         {
