@@ -34,13 +34,6 @@
             this.welcomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mainPanel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnConfirm = new System.Windows.Forms.Button();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.lblUsername = new System.Windows.Forms.Label();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +44,13 @@
             this.chiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.orderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnConfirm = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.lblUsername = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
@@ -113,6 +113,130 @@
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
             this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(236, 36);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
+            // 
+            // accountToolStripMenuItem
+            // 
+            this.accountToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accountToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("accountToolStripMenuItem.Image")));
+            this.accountToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.accountToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
+            this.accountToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 5, 10);
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(280, 78);
+            this.accountToolStripMenuItem.Text = "Tài khoản";
+            this.accountToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // employeeToolStripMenuItem
+            // 
+            this.employeeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("employeeToolStripMenuItem.Image")));
+            this.employeeToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.employeeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
+            this.employeeToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 5, 10);
+            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(280, 78);
+            this.employeeToolStripMenuItem.Text = "Nhân viên";
+            this.employeeToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // productToolStripMenuItem
+            // 
+            this.productToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("productToolStripMenuItem.Image")));
+            this.productToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.productToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.productToolStripMenuItem.Name = "productToolStripMenuItem";
+            this.productToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 5, 10);
+            this.productToolStripMenuItem.Size = new System.Drawing.Size(280, 78);
+            this.productToolStripMenuItem.Text = "Sản phẩm";
+            this.productToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // categoryToolStripMenuItem
+            // 
+            this.categoryToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("categoryToolStripMenuItem.Image")));
+            this.categoryToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.categoryToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.categoryToolStripMenuItem.Name = "categoryToolStripMenuItem";
+            this.categoryToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 5, 10);
+            this.categoryToolStripMenuItem.Size = new System.Drawing.Size(280, 78);
+            this.categoryToolStripMenuItem.Text = "Danh mục";
+            this.categoryToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // reportToolStripMenuItem
+            // 
+            this.reportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thuToolStripMenuItem,
+            this.chiToolStripMenuItem,
+            this.chiToolStripMenuItem1});
+            this.reportToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reportToolStripMenuItem.Image")));
+            this.reportToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.reportToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
+            this.reportToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 5, 10);
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(280, 78);
+            this.reportToolStripMenuItem.Text = "Báo cáo";
+            this.reportToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // thuToolStripMenuItem
+            // 
+            this.thuToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.thuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thuToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("thuToolStripMenuItem.Image")));
+            this.thuToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.thuToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.thuToolStripMenuItem.Name = "thuToolStripMenuItem";
+            this.thuToolStripMenuItem.Size = new System.Drawing.Size(179, 38);
+            this.thuToolStripMenuItem.Text = "Chung";
+            // 
+            // chiToolStripMenuItem
+            // 
+            this.chiToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.chiToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chiToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("chiToolStripMenuItem.Image")));
+            this.chiToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.chiToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.chiToolStripMenuItem.Name = "chiToolStripMenuItem";
+            this.chiToolStripMenuItem.Size = new System.Drawing.Size(179, 38);
+            this.chiToolStripMenuItem.Text = "Thu";
+            // 
+            // chiToolStripMenuItem1
+            // 
+            this.chiToolStripMenuItem1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.chiToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chiToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("chiToolStripMenuItem1.Image")));
+            this.chiToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.chiToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.chiToolStripMenuItem1.Name = "chiToolStripMenuItem1";
+            this.chiToolStripMenuItem1.Size = new System.Drawing.Size(179, 38);
+            this.chiToolStripMenuItem1.Text = "Chi";
+            // 
+            // orderToolStripMenuItem
+            // 
+            this.orderToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("orderToolStripMenuItem.Image")));
+            this.orderToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.orderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
+            this.orderToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 5, 10);
+            this.orderToolStripMenuItem.Size = new System.Drawing.Size(280, 78);
+            this.orderToolStripMenuItem.Text = "Gọi món";
+            this.orderToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.orderToolStripMenuItem.Click += new System.EventHandler(this.orderToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.Image")));
+            this.exitToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.exitToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 5, 10);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(280, 78);
+            this.exitToolStripMenuItem.Text = "Thoát";
+            this.exitToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
             // 
             // mainPanel
             // 
@@ -202,129 +326,6 @@
             this.lblUsername.Size = new System.Drawing.Size(139, 31);
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "Username";
-            // 
-            // accountToolStripMenuItem
-            // 
-            this.accountToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accountToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("accountToolStripMenuItem.Image")));
-            this.accountToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.accountToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-            this.accountToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 5, 10);
-            this.accountToolStripMenuItem.Size = new System.Drawing.Size(280, 78);
-            this.accountToolStripMenuItem.Text = "Tài khoản";
-            this.accountToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // employeeToolStripMenuItem
-            // 
-            this.employeeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("employeeToolStripMenuItem.Image")));
-            this.employeeToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.employeeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 5, 10);
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(280, 78);
-            this.employeeToolStripMenuItem.Text = "Nhân viên";
-            this.employeeToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // productToolStripMenuItem
-            // 
-            this.productToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("productToolStripMenuItem.Image")));
-            this.productToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.productToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.productToolStripMenuItem.Name = "productToolStripMenuItem";
-            this.productToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 5, 10);
-            this.productToolStripMenuItem.Size = new System.Drawing.Size(280, 78);
-            this.productToolStripMenuItem.Text = "Sản phẩm";
-            this.productToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // categoryToolStripMenuItem
-            // 
-            this.categoryToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("categoryToolStripMenuItem.Image")));
-            this.categoryToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.categoryToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.categoryToolStripMenuItem.Name = "categoryToolStripMenuItem";
-            this.categoryToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 5, 10);
-            this.categoryToolStripMenuItem.Size = new System.Drawing.Size(280, 78);
-            this.categoryToolStripMenuItem.Text = "Danh mục";
-            this.categoryToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // reportToolStripMenuItem
-            // 
-            this.reportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thuToolStripMenuItem,
-            this.chiToolStripMenuItem,
-            this.chiToolStripMenuItem1});
-            this.reportToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reportToolStripMenuItem.Image")));
-            this.reportToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.reportToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 5, 10);
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(280, 78);
-            this.reportToolStripMenuItem.Text = "Báo cáo";
-            this.reportToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // thuToolStripMenuItem
-            // 
-            this.thuToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.thuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thuToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("thuToolStripMenuItem.Image")));
-            this.thuToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.thuToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.thuToolStripMenuItem.Name = "thuToolStripMenuItem";
-            this.thuToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
-            this.thuToolStripMenuItem.Text = "Chung";
-            // 
-            // chiToolStripMenuItem
-            // 
-            this.chiToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.chiToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chiToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("chiToolStripMenuItem.Image")));
-            this.chiToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.chiToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.chiToolStripMenuItem.Name = "chiToolStripMenuItem";
-            this.chiToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
-            this.chiToolStripMenuItem.Text = "Thu";
-            // 
-            // chiToolStripMenuItem1
-            // 
-            this.chiToolStripMenuItem1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.chiToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chiToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("chiToolStripMenuItem1.Image")));
-            this.chiToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.chiToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.chiToolStripMenuItem1.Name = "chiToolStripMenuItem1";
-            this.chiToolStripMenuItem1.Size = new System.Drawing.Size(196, 38);
-            this.chiToolStripMenuItem1.Text = "Chi";
-            // 
-            // orderToolStripMenuItem
-            // 
-            this.orderToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("orderToolStripMenuItem.Image")));
-            this.orderToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.orderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
-            this.orderToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 5, 10);
-            this.orderToolStripMenuItem.Size = new System.Drawing.Size(280, 78);
-            this.orderToolStripMenuItem.Text = "Gọi món";
-            this.orderToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.orderToolStripMenuItem.Click += new System.EventHandler(this.orderToolStripMenuItem_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.Image")));
-            this.exitToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.exitToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 5, 10);
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(280, 78);
-            this.exitToolStripMenuItem.Text = "Thoát";
-            this.exitToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
             // 
             // MainForm
             // 

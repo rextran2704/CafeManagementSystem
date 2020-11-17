@@ -37,6 +37,7 @@ namespace CafeManagementSystem
                 txtUsername.Text = "";
                 txtPassword.Text = "";
                 welcomeToolStripMenuItem.Text = User.Username;
+                // chuyển đến form Order
             }
             else MessageBox.Show("LoginFailed");
         }
@@ -81,6 +82,13 @@ namespace CafeManagementSystem
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openChildForm(new ChangePassForm());
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            User = null;
+            welcomeToolStripMenuItem.Text = "Xin Chào";
+            // Chuyển về form đăng nhập
         }
     }
 }
