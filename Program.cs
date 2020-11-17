@@ -1,4 +1,5 @@
 ﻿using CafeManagementSystem.dao;
+using CafeManagementSystem.model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace CafeManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CategoryForm());
+            Application.Run(new MainForm());
         }
     }
 }

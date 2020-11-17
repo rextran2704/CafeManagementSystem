@@ -48,17 +48,17 @@ namespace CafeManagementSystem.dao
             return employeeList;
         }
 
-        public bool RemoveEmployeeByUsername(string name)
+        public bool RemoveEmployeeById(string id)
         {
             try
             {
                 int nRows;
                 Dao dao = new Dao();
-                string sqlStatement = "DELETE FROM Employee WHERE EmployeeName=@name";
+                string sqlStatement = "DELETE FROM Employee WHERE EmployeeID=@id";
                 using (SqlCommand command = dao.Remove(sqlStatement))
                 {
                     command.CommandText = sqlStatement;
-                    command.Parameters.AddWithValue("@name", name);
+                    command.Parameters.AddWithValue("@id", id);
                     nRows = command.ExecuteNonQuery();
                 }
                 dao.Con.Close();
@@ -104,10 +104,11 @@ namespace CafeManagementSystem.dao
             {
                 int nRows;
                 Dao dao = new Dao();
-                string sqlStatement = "UPDATE Employee SET Gender=@gender, Position=@position, StartDate = @date, Address = @address, PhoneNumber = @Phone WHERE EmployeeName=@name";
+                string sqlStatement = "UPDATE Employee SET EmployeeName=@name, Gender=@gender, Position=@position, StartDate = @date, Address = @address, PhoneNumber = @Phone WHERE EmployeeId=@Id";
                 using (SqlCommand command = dao.Update(sqlStatement))
                 {
                     command.CommandText = sqlStatement;
+                    command.Parameters.AddWithValue("@Id", employee.EmployeeID);
                     command.Parameters.AddWithValue("@name", employee.EmployeeName);
                     command.Parameters.AddWithValue("@gender", employee.Gender);
                     command.Parameters.AddWithValue("@position", employee.Position);

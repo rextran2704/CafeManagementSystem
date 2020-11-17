@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CafeManagementSystem.dao;
+using CafeManagementSystem.model;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -6,6 +8,8 @@ namespace CafeManagementSystem
 {
     public partial class MainForm : Form
     {
+        private Account User = null;
+
         public MainForm()
         {
             InitializeComponent();
@@ -24,7 +28,18 @@ namespace CafeManagementSystem
 
         private void Login()
         {
-            MessageBox.Show("Login Action");
+            //MessageBox.Show("Login Action");
+            AccountDao AcDAO = new AccountDao();
+            bool LoginSuccess = AcDAO.CheckLogin(txtUsername.Text, txtPassword.Text);
+            if (LoginSuccess) { 
+                MessageBox.Show("LoginSuccess");
+                User = AcDAO.GetAccountByUsername(txtUsername.Text);
+                txtUsername.Text = "";
+                txtPassword.Text = "";
+                welcomeToolStripMenuItem.Text = "Xin chào " + User.Username;
+                // chuyển đến form Order
+            }
+            else MessageBox.Show("LoginFailed");
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -67,6 +82,18 @@ namespace CafeManagementSystem
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openChildForm(new ChangePassForm());
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            User = null;
+            welcomeToolStripMenuItem.Text = "Xin Chào";
+            // Chuyển về form đăng nhập
+        }
+
+        private void categoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new CategoryForm());
         }
     }
 }

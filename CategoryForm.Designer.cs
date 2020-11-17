@@ -78,7 +78,7 @@
             // 
             this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(1310, 280);
+            this.txtId.Location = new System.Drawing.Point(1119, 280);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(361, 45);
             this.txtId.TabIndex = 5;
@@ -87,16 +87,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1123, 280);
+            this.label1.Location = new System.Drawing.Point(932, 280);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 39);
+            this.label1.Size = new System.Drawing.Size(49, 38);
             this.label1.TabIndex = 6;
             this.label1.Text = "ID";
             // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(1310, 361);
+            this.txtName.Location = new System.Drawing.Point(1119, 361);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(361, 45);
             this.txtName.TabIndex = 5;
@@ -105,16 +105,16 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1123, 364);
+            this.label2.Location = new System.Drawing.Point(932, 364);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 39);
+            this.label2.Size = new System.Drawing.Size(144, 38);
             this.label2.TabIndex = 6;
             this.label2.Text = "Tên mục";
             // 
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(1117, 489);
+            this.btnAdd.Location = new System.Drawing.Point(926, 489);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(144, 55);
@@ -125,7 +125,7 @@
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(1328, 489);
+            this.btnEdit.Location = new System.Drawing.Point(1137, 489);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(144, 55);
@@ -136,7 +136,7 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(1542, 489);
+            this.btnDelete.Location = new System.Drawing.Point(1351, 489);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(144, 55);
