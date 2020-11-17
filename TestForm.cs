@@ -16,9 +16,11 @@ namespace CafeManagementSystem
         private void TestForm_Load(object sender, EventArgs e)
         {
             ReceiptDetailDao rd = new ReceiptDetailDao();
-            ReceiptDetail r = new ReceiptDetail(5, 7, 1, 15000);
+            ReceiptDetail r = new ReceiptDetail(5, 7, 1, 20000);
 
             rd.AddReceiptDetail(r);
+            List<ReceiptDetail> rdList = rd.GetReceiptDetailList();
+            MessageBox.Show(rdList.Count.ToString());
         }
 
         private void button1_Click(object sender, EventArgs e)
