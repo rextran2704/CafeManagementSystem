@@ -20,7 +20,7 @@ namespace CafeManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text.Length>0 && textBox2.Text.Length > 0 && textBox3.Text.Length > 0)
+            if(textBox1.Text.Length>0 && textBox2.Text.Length > 0 && textBox3.Text.Length > 0&& textBox4.Text.Length > 0)
             {
                 AccountDao account = new AccountDao();
                 if (account.CheckLogin(textBox1.Text, textBox2.Text))
@@ -68,5 +68,17 @@ namespace CafeManagementSystem
         {
            
         }
+
+        private void textBox4_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                if (textBox4.Text != textBox3.Text)
+                {
+                    textBox4.Text = "";
+                }
+            }
+            catch (Exception) { }
+            }
     }
 }
