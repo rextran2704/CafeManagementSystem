@@ -25,8 +25,14 @@ namespace CafeManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            EmployeeDao ed = new EmployeeDao();
-            MessageBox.Show(ed.SearchEmployeeByName("Trần").Count.ToString());
+            Dictionary<Product, int> productsMap = new Dictionary<Product, int>();
+            List<Product> products = new ProductDao().SearchProductListByName("b");
+            MessageBox.Show(products[0].ProductName);
+
+            foreach (Product item in products)
+            {
+                productsMap.Add(item, 0);
+            }
         }
     }
 }
