@@ -95,5 +95,20 @@ namespace CafeManagementSystem
         {
             openChildForm(new CategoryForm());
         }
+
+        private void employeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new EmployeeForm());
+        }
+
+        private void productToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ProductForm());
+        }
+
+        private void accountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new AccountForm());
+        }
     }
 }
