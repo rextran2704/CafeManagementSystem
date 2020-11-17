@@ -100,8 +100,6 @@
             this.textBox3.PasswordChar = '*';
             this.textBox3.Size = new System.Drawing.Size(328, 34);
             this.textBox3.TabIndex = 29;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
             // 
             // label3
             // 
