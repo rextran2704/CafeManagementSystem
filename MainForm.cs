@@ -36,7 +36,7 @@ namespace CafeManagementSystem
                 User = AcDAO.GetAccountByUsername(txtUsername.Text);
                 txtUsername.Text = "";
                 txtPassword.Text = "";
-                welcomeToolStripMenuItem.Text = User.Username;
+                welcomeToolStripMenuItem.Text = "Xin chào " + User.Username;
                 // chuyển đến form Order
             }
             else MessageBox.Show("LoginFailed");
@@ -89,6 +89,26 @@ namespace CafeManagementSystem
             User = null;
             welcomeToolStripMenuItem.Text = "Xin Chào";
             // Chuyển về form đăng nhập
+        }
+
+        private void categoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new CategoryForm());
+        }
+
+        private void employeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new EmployeeForm());
+        }
+
+        private void productToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ProductForm());
+        }
+
+        private void accountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new AccountForm());
         }
     }
 }
