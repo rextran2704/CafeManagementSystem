@@ -73,9 +73,9 @@
             this.splitContainer1.Panel2.Controls.Add(this.txtTotal);
             this.splitContainer1.Panel2.Controls.Add(this.lblTotal);
             this.splitContainer1.Panel2.Controls.Add(this.lsvOrder);
-            this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(5);
-            this.splitContainer1.Size = new System.Drawing.Size(1427, 997);
-            this.splitContainer1.SplitterDistance = 472;
+            this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.splitContainer1.Size = new System.Drawing.Size(1427, 846);
+            this.splitContainer1.SplitterDistance = 470;
             this.splitContainer1.TabIndex = 0;
             // 
             // btnSearch
@@ -84,7 +84,7 @@
             this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSearch.Location = new System.Drawing.Point(395, 54);
+            this.btnSearch.Location = new System.Drawing.Point(392, 55);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(0);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(67, 46);
@@ -99,14 +99,14 @@
             this.txtSearch.Location = new System.Drawing.Point(12, 55);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(380, 45);
+            this.txtSearch.Size = new System.Drawing.Size(378, 45);
             this.txtSearch.TabIndex = 0;
             // 
             // btnCalculate
             // 
             this.btnCalculate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCalculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalculate.Location = new System.Drawing.Point(607, 917);
+            this.btnCalculate.Location = new System.Drawing.Point(610, 917);
             this.btnCalculate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(256, 55);
@@ -118,7 +118,7 @@
             // 
             this.btnRemove.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Location = new System.Drawing.Point(344, 917);
+            this.btnRemove.Location = new System.Drawing.Point(347, 917);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(173, 55);
@@ -146,7 +146,7 @@
             this.txtTableNumber.Location = new System.Drawing.Point(409, 11);
             this.txtTableNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTableNumber.Name = "txtTableNumber";
-            this.txtTableNumber.Size = new System.Drawing.Size(285, 45);
+            this.txtTableNumber.Size = new System.Drawing.Size(289, 45);
             this.txtTableNumber.TabIndex = 2;
             // 
             // label1
@@ -171,7 +171,7 @@
             this.txtTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(415, 45);
+            this.txtTotal.Size = new System.Drawing.Size(418, 45);
             this.txtTotal.TabIndex = 2;
             // 
             // lblTotal
@@ -200,7 +200,7 @@
             this.lsvOrder.Location = new System.Drawing.Point(8, 81);
             this.lsvOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lsvOrder.Name = "lsvOrder";
-            this.lsvOrder.Size = new System.Drawing.Size(931, 658);
+            this.lsvOrder.Size = new System.Drawing.Size(934, 658);
             this.lsvOrder.TabIndex = 0;
             this.lsvOrder.UseCompatibleStateImageBehavior = false;
             this.lsvOrder.View = System.Windows.Forms.View.Details;
@@ -226,7 +226,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1427, 997);
+            this.ClientSize = new System.Drawing.Size(1427, 846);
             this.Controls.Add(this.splitContainer1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "OrderForm";
