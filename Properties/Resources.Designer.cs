@@ -83,6 +83,16 @@ namespace CafeManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background_login_21 {
+            get {
+                object obj = ResourceManager.GetObject("background-login-21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap boy {
             get {
                 object obj = ResourceManager.GetObject("boy", resourceCulture);

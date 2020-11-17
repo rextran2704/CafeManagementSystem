@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 namespace CafeManagementSystem
 {
+
     public partial class MainForm : Form
     {
         private Account User = null;
