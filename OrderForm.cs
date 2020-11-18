@@ -37,6 +37,7 @@ namespace CafeManagementSystem
         }
         void EventAddVaoBtn(object sender, EventArgs e)
         {
+
             Button button = sender as Button;
 
             Product prodl = productList.Find(x => x.ProductName == button.Text);
@@ -63,6 +64,9 @@ namespace CafeManagementSystem
             }
             else
                 lsvOrder.Items.Add(listViewItem);
+
+            calculateTotal();
+
         }
         void loadProductsToSearch(List<Product> products) {
 
@@ -92,6 +96,7 @@ namespace CafeManagementSystem
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
+            
             if (lsvOrder.SelectedItems.Count > 0)
             {
                 ListViewItem item = lsvOrder.SelectedItems[0];
@@ -102,16 +107,19 @@ namespace CafeManagementSystem
                     {
                         productsMap.Remove(myitem);
                         item.Remove();
+                        calculateTotal();
                         return;
                     }
                 }
                 //rest of your logic
             }
+            
         }
 
-        private void btnCalculate_Click(object sender, EventArgs e)
+        void calculateTotal() 
         {
-            btnDatBan.Enabled=true;
+            btnDatBan.Enabled = true;
+
             double sum = 0;
             foreach (var myitem in productsMap)
             {
@@ -120,8 +128,11 @@ namespace CafeManagementSystem
             txtTotal.Text = sum.ToString();
         }
 
+
         private void btnDatBan_Click(object sender, EventArgs e)
         {
+
+
 
             if (string.IsNullOrEmpty(txtTotal.Text) && string.IsNullOrEmpty(txtTableNumber.Text)) {
                 MessageBox.Show("Vui lòng điền số bàn và chọn sản phẩm và nhấn tính tiền!");
@@ -133,18 +144,24 @@ namespace CafeManagementSystem
                 MessageBox.Show("Vui lòng chọn sản phẩm và nhấn tính tiền");
                 return;
             }
-            int index = new ReceiptDao().AddReceipt(new Receipt(1, int.Parse(txtTableNumber.Text), new DateTime().Date, total, 0));
-            if (index > 0)
+            try
             {
-                foreach (var myitem in productsMap)
+                int index = new ReceiptDao().AddReceipt(new Receipt(1, int.Parse(txtTableNumber.Text), new DateTime().Date, total, 0));
+                if (index > 0)
                 {
-                    new ReceiptDetailDao().AddReceiptDetail(new ReceiptDetail(index,myitem.Key.ProductID,myitem.Value, total));
-                }
+                    foreach (var myitem in productsMap)
+                    {
+                        new ReceiptDetailDao().AddReceiptDetail(new ReceiptDetail(index, myitem.Key.ProductID, myitem.Value, total));
+                    }
 
-                MessageBox.Show("Đặt Bàn Thành Công");
+                    MessageBox.Show("Đặt Bàn Thành Công");
+                }
+                else
+                    MessageBox.Show("thất bại rồi");
             }
-            else
-                MessageBox.Show("thất bại rồi");
+            catch (Exception) {
+                MessageBox.Show("nhap so ban dung dinh dang");
+            }
         }
     }
 }
