@@ -107,15 +107,15 @@ namespace CafeManagementSystem.dao
             int nRows;
             Dao dao = new Dao();
             string sqlStatement = "UPDATE Account SET Password=@password WHERE Username=@username";
-                using (SqlCommand command = dao.Update(sqlStatement))
-                {
-                    command.CommandText = sqlStatement;
-                    command.Parameters.AddWithValue("@username", username);
-                    command.Parameters.AddWithValue("@password", newPassword);
-                    nRows = command.ExecuteNonQuery();
-                }
-                dao.Con.Close();
-                return (nRows > 0);
+            using (SqlCommand command = dao.Update(sqlStatement))
+            {
+                command.CommandText = sqlStatement;
+                command.Parameters.AddWithValue("@username", username);
+                command.Parameters.AddWithValue("@password", newPassword);
+                nRows = command.ExecuteNonQuery();
+            }
+            dao.Con.Close();
+            return (nRows > 0);
         }
 
         public bool CheckLogin(string username, string password)

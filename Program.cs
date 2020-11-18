@@ -1,4 +1,5 @@
 ﻿using CafeManagementSystem.dao;
+using CafeManagementSystem.model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +16,11 @@ namespace CafeManagementSystem
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TestForm());
+             Application.EnableVisualStyles();
+             Application.SetCompatibleTextRenderingDefault(false);
+             Application.Run(new ChangePassForm());
+            //List<Account> ls = AccountDao.GetAccountList();
+            //Console.WriteLine(ls.Count());
         }
     }
 }
