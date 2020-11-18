@@ -10,6 +10,14 @@ namespace CafeManagementSystem.model
         private double totalFee;
         private string detail;
 
+        public Payment(int employeeID, DateTime payDate, double totalFee, string detail)
+        {
+            this.employeeID = employeeID;
+            this.payDate = payDate;
+            this.totalFee = totalFee;
+            this.detail = detail;
+        }
+
         public Payment(int paymentID, int employeeID, DateTime payDate, double totalFee, string detail)
         {
             this.paymentID = paymentID;
