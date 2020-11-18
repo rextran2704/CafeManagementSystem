@@ -123,7 +123,7 @@ namespace CafeManagementSystem
         private void btnDatBan_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(txtTotal.Text)&& string.IsNullOrEmpty(txtTableNumber.Text)) {
+            if (string.IsNullOrEmpty(txtTotal.Text) && string.IsNullOrEmpty(txtTableNumber.Text)) {
                 MessageBox.Show("Vui lòng điền số bàn và chọn sản phẩm và nhấn tính tiền!");
                 return;
             }
