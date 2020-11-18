@@ -1,6 +1,8 @@
-﻿namespace CafeManagementSystem.model
+﻿using System;
+
+namespace CafeManagementSystem.model
 {
-    class Product
+    class Product :IEquatable<Product>
     {
         private int productID;
         private string productName;
@@ -37,5 +39,23 @@
         public string Image { get => image; set => image = value; }
         public string Description { get => description; set => description = value; }
         public int CategoryID { get => categoryID; set => categoryID = value; }
+
+        public bool Equals(Product other)
+        {
+            return other != null && other.productID == this.productID;
+        }
+        public override int GetHashCode()
+        {
+            return productID.GetHashCode();
+        }
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as Product);
+        }
+        public override string ToString()
+        {
+            return productName;
+        }
+
     }
 }

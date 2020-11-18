@@ -39,9 +39,9 @@
             this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.generalReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.incomeReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paymentReportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.orderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainPanel = new System.Windows.Forms.Panel();
@@ -126,6 +126,7 @@
             this.accountToolStripMenuItem.Size = new System.Drawing.Size(280, 78);
             this.accountToolStripMenuItem.Text = "Tài khoản";
             this.accountToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.accountToolStripMenuItem.Click += new System.EventHandler(this.accountToolStripMenuItem_Click);
             // 
             // employeeToolStripMenuItem
             // 
@@ -138,6 +139,7 @@
             this.employeeToolStripMenuItem.Size = new System.Drawing.Size(280, 78);
             this.employeeToolStripMenuItem.Text = "Nhân viên";
             this.employeeToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.employeeToolStripMenuItem.Click += new System.EventHandler(this.employeeToolStripMenuItem_Click);
             // 
             // productToolStripMenuItem
             // 
@@ -150,6 +152,7 @@
             this.productToolStripMenuItem.Size = new System.Drawing.Size(280, 78);
             this.productToolStripMenuItem.Text = "Sản phẩm";
             this.productToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.productToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // categoryToolStripMenuItem
             // 
@@ -162,13 +165,14 @@
             this.categoryToolStripMenuItem.Size = new System.Drawing.Size(280, 78);
             this.categoryToolStripMenuItem.Text = "Danh mục";
             this.categoryToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.categoryToolStripMenuItem.Click += new System.EventHandler(this.categoryToolStripMenuItem_Click);
             // 
             // reportToolStripMenuItem
             // 
             this.reportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thuToolStripMenuItem,
-            this.chiToolStripMenuItem,
-            this.chiToolStripMenuItem1});
+            this.generalReportToolStripMenuItem,
+            this.incomeReportToolStripMenuItem,
+            this.paymentReportToolStripMenuItem1});
             this.reportToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reportToolStripMenuItem.Image")));
             this.reportToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -179,38 +183,41 @@
             this.reportToolStripMenuItem.Text = "Báo cáo";
             this.reportToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // thuToolStripMenuItem
+            // generalReportToolStripMenuItem
             // 
-            this.thuToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.thuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thuToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("thuToolStripMenuItem.Image")));
-            this.thuToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.thuToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.thuToolStripMenuItem.Name = "thuToolStripMenuItem";
-            this.thuToolStripMenuItem.Size = new System.Drawing.Size(179, 38);
-            this.thuToolStripMenuItem.Text = "Chung";
+            this.generalReportToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.generalReportToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generalReportToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("generalReportToolStripMenuItem.Image")));
+            this.generalReportToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.generalReportToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.generalReportToolStripMenuItem.Name = "generalReportToolStripMenuItem";
+            this.generalReportToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.generalReportToolStripMenuItem.Text = "Chung";
+            this.generalReportToolStripMenuItem.Click += new System.EventHandler(this.generalReportToolStripMenuItem_Click);
             // 
-            // chiToolStripMenuItem
+            // incomeReportToolStripMenuItem
             // 
-            this.chiToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.chiToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chiToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("chiToolStripMenuItem.Image")));
-            this.chiToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.chiToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.chiToolStripMenuItem.Name = "chiToolStripMenuItem";
-            this.chiToolStripMenuItem.Size = new System.Drawing.Size(179, 38);
-            this.chiToolStripMenuItem.Text = "Thu";
+            this.incomeReportToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.incomeReportToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.incomeReportToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("incomeReportToolStripMenuItem.Image")));
+            this.incomeReportToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.incomeReportToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.incomeReportToolStripMenuItem.Name = "incomeReportToolStripMenuItem";
+            this.incomeReportToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.incomeReportToolStripMenuItem.Text = "Thu";
+            this.incomeReportToolStripMenuItem.Click += new System.EventHandler(this.incomeReportToolStripMenuItem_Click);
             // 
-            // chiToolStripMenuItem1
+            // paymentReportToolStripMenuItem1
             // 
-            this.chiToolStripMenuItem1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.chiToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chiToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("chiToolStripMenuItem1.Image")));
-            this.chiToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.chiToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.chiToolStripMenuItem1.Name = "chiToolStripMenuItem1";
-            this.chiToolStripMenuItem1.Size = new System.Drawing.Size(179, 38);
-            this.chiToolStripMenuItem1.Text = "Chi";
+            this.paymentReportToolStripMenuItem1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.paymentReportToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paymentReportToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("paymentReportToolStripMenuItem1.Image")));
+            this.paymentReportToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.paymentReportToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.paymentReportToolStripMenuItem1.Name = "paymentReportToolStripMenuItem1";
+            this.paymentReportToolStripMenuItem1.Size = new System.Drawing.Size(196, 38);
+            this.paymentReportToolStripMenuItem1.Text = "Chi";
+            this.paymentReportToolStripMenuItem1.Click += new System.EventHandler(this.paymentReportToolStripMenuItem1_Click);
             // 
             // orderToolStripMenuItem
             // 
@@ -252,7 +259,7 @@
             this.mainPanel.Location = new System.Drawing.Point(289, 0);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(2);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(967, 670);
+            this.mainPanel.Size = new System.Drawing.Size(866, 670);
             this.mainPanel.TabIndex = 1;
             // 
             // label2
@@ -261,7 +268,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.PeachPuff;
-            this.label2.Location = new System.Drawing.Point(509, 92);
+            this.label2.Location = new System.Drawing.Point(439, 80);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(261, 55);
@@ -273,10 +280,10 @@
             this.btnConfirm.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.btnConfirm.Location = new System.Drawing.Point(736, 384);
+            this.btnConfirm.Location = new System.Drawing.Point(712, 352);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(144, 35);
+            this.btnConfirm.Size = new System.Drawing.Size(122, 39);
             this.btnConfirm.TabIndex = 2;
             this.btnConfirm.Text = "Xác nhận";
             this.btnConfirm.UseVisualStyleBackColor = false;
@@ -285,11 +292,11 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(518, 318);
+            this.txtPassword.Location = new System.Drawing.Point(548, 294);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(363, 37);
+            this.txtPassword.Size = new System.Drawing.Size(288, 37);
             this.txtPassword.TabIndex = 1;
             // 
             // label1
@@ -298,20 +305,20 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label1.Location = new System.Drawing.Point(370, 321);
+            this.label1.Location = new System.Drawing.Point(300, 297);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 31);
+            this.label1.Size = new System.Drawing.Size(125, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Password";
+            this.label1.Text = "Mật khẩu";
             // 
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(518, 254);
+            this.txtUsername.Location = new System.Drawing.Point(548, 242);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(363, 37);
+            this.txtUsername.Size = new System.Drawing.Size(288, 37);
             this.txtUsername.TabIndex = 1;
             // 
             // lblUsername
@@ -320,18 +327,18 @@
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.lblUsername.Location = new System.Drawing.Point(370, 257);
+            this.lblUsername.Location = new System.Drawing.Point(300, 245);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(139, 31);
+            this.lblUsername.Size = new System.Drawing.Size(195, 31);
             this.lblUsername.TabIndex = 0;
-            this.lblUsername.Text = "Username";
+            this.lblUsername.Text = "Tên đăng nhập";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1256, 670);
+            this.ClientSize = new System.Drawing.Size(1155, 670);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -358,9 +365,9 @@
         private System.Windows.Forms.ToolStripMenuItem productToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem chiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem chiToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem generalReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem incomeReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem paymentReportToolStripMenuItem1;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label1;

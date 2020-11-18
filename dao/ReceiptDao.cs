@@ -68,30 +68,30 @@ namespace CafeManagementSystem.dao
                 return false;
             }
         }
-        public bool AddReceipt(Receipt Receipt)
+        public int AddReceipt(Receipt Receipt)
         {
             try
             {
                 int nRows;
                 Dao dao = new Dao();
-                string sqlStatement = "INSERT INTO Receipt(EmployeeID, TableNumber, PrintDate, Total, AdditionalFee) VALUES (@emID, @tablenumber, @date, @total, @addfee)";
+                string sqlStatement = "INSERT INTO Receipt(EmployeeID, TableNumber, Total, AdditionalFee) output INSERTED.ReceiptID VALUES (@emID, @tablenumber, @total, @addfee)";
                 using (SqlCommand command = dao.Add(sqlStatement))
                 {
                     command.CommandText = sqlStatement;
                     command.Parameters.AddWithValue("@emID", Receipt.EmployeeID);
                     command.Parameters.AddWithValue("@tablenumber", Receipt.TableNumber);
-                    command.Parameters.AddWithValue("@date", Receipt.PrintDate);
                     command.Parameters.AddWithValue("@total", Receipt.Total);
                     command.Parameters.AddWithValue("@addfee", Receipt.AdditionalFee);
-                    nRows = command.ExecuteNonQuery();
+
+                    nRows = (int)command.ExecuteScalar();
                 }
                 dao.Con.Close();
-                return nRows > 0;
+                return nRows;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                return false;
+                return -1;
             }
         }
 

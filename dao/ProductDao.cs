@@ -35,19 +35,55 @@ namespace CafeManagementSystem.dao
             if (reader == null) return null;
             while (reader.Read())
             {
-                int id = reader.GetInt32(0);
-                string name = reader.GetString(1);
-                double price = (double)reader.GetDecimal(2);
-                int quantity = reader.GetInt32(3);
-                string image = reader.GetString(4);
-                string description = reader.GetString(5);
-                int categoryID = reader.GetInt32(6);
-                ProductList.Add(new Product(id, name, price, quantity, image, description, categoryID));
+                try
+                {
+
+                    int id = reader.GetInt32(0);
+                    string name = reader.GetString(1);
+                    double price = (double)reader.GetDecimal(2);
+                    int quantity = reader.GetInt32(3);
+                    string image = reader.GetString(4);
+                    string description = reader.IsDBNull(5) ? null : reader.GetString(5);
+                    int categoryID = reader.GetInt32(6);
+
+                    ProductList.Add(new Product(id, name, price, quantity, image, description, categoryID));
+                }catch (Exception) {
+                }
+
             }
             dao.Con.Close();
             return ProductList;
         }
+        public List<Product> SearchProductListByName(string searchvalue)
+        {
+            List<Product> ProductList = new List<Product>();
+            Dao dao = new Dao();
+            string sqlStatement = "SELECT ProductID, ProductName, Price, Quantity, Image, Description, CategoryID FROM Product where ProductName Like N'%"+searchvalue+"%'";
+            System.Data.SqlClient.SqlDataReader reader = dao.Get(sqlStatement);
+            if (reader == null) return null;
+            while (reader.Read())
+            {
+                try
+                {
 
+                    int id = reader.GetInt32(0);
+                    string name = reader.GetString(1);
+                    double price = (double)reader.GetDecimal(2);
+                    int quantity = reader.GetInt32(3);
+                    string image = reader.GetString(4);
+                    string description = "sss";
+                    int categoryID = reader.GetInt32(6);
+
+                    ProductList.Add(new Product(id, name, price, quantity, image, description, categoryID));
+                }
+                catch (Exception)
+                {
+                }
+
+            }
+            dao.Con.Close();
+            return ProductList;
+        }
         public bool RemoveProductByName(string name)
         {
             try

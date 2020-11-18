@@ -30,9 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.monAnLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnCalculate = new System.Windows.Forms.Button();
+            this.btnDatBan = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtTableNumber = new System.Windows.Forms.TextBox();
@@ -53,19 +54,20 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.splitContainer1.Panel1.Controls.Add(this.monAnLayoutPanel);
             this.splitContainer1.Panel1.Controls.Add(this.btnSearch);
             this.splitContainer1.Panel1.Controls.Add(this.txtSearch);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.btnCalculate);
+            this.splitContainer1.Panel2.Controls.Add(this.btnDatBan);
             this.splitContainer1.Panel2.Controls.Add(this.btnRemove);
             this.splitContainer1.Panel2.Controls.Add(this.btnCancel);
             this.splitContainer1.Panel2.Controls.Add(this.txtTableNumber);
@@ -73,11 +75,21 @@
             this.splitContainer1.Panel2.Controls.Add(this.txtTotal);
             this.splitContainer1.Panel2.Controls.Add(this.lblTotal);
             this.splitContainer1.Panel2.Controls.Add(this.lsvOrder);
-            this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.splitContainer1.Size = new System.Drawing.Size(1070, 810);
-            this.splitContainer1.SplitterDistance = 355;
+            this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(4);
+            this.splitContainer1.Size = new System.Drawing.Size(1540, 845);
+            this.splitContainer1.SplitterDistance = 647;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // monAnLayoutPanel
+            // 
+            this.monAnLayoutPanel.AutoScroll = true;
+            this.monAnLayoutPanel.Location = new System.Drawing.Point(6, 86);
+            this.monAnLayoutPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.monAnLayoutPanel.MinimumSize = new System.Drawing.Size(521, 973);
+            this.monAnLayoutPanel.Name = "monAnLayoutPanel";
+            this.monAnLayoutPanel.Size = new System.Drawing.Size(521, 973);
+            this.monAnLayoutPanel.TabIndex = 2;
             // 
             // btnSearch
             // 
@@ -85,55 +97,57 @@
             this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSearch.Location = new System.Drawing.Point(304, 45);
+            this.btnSearch.Location = new System.Drawing.Point(461, 45);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(0);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(50, 37);
+            this.btnSearch.Size = new System.Drawing.Size(35, 37);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(2, 45);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch.Location = new System.Drawing.Point(9, 45);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSearch.MaximumSize = new System.Drawing.Size(467, 37);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(301, 37);
+            this.txtSearch.Size = new System.Drawing.Size(450, 37);
             this.txtSearch.TabIndex = 0;
             // 
-            // btnCalculate
+            // btnDatBan
             // 
-            this.btnCalculate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCalculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalculate.Location = new System.Drawing.Point(453, 677);
-            this.btnCalculate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(192, 54);
-            this.btnCalculate.TabIndex = 3;
-            this.btnCalculate.Text = "Tính tiền";
-            this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnDatBan.Enabled = false;
+            this.btnDatBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatBan.Location = new System.Drawing.Point(507, 703);
+            this.btnDatBan.Name = "btnDatBan";
+            this.btnDatBan.Size = new System.Drawing.Size(159, 45);
+            this.btnDatBan.TabIndex = 4;
+            this.btnDatBan.Text = "Đặt bàn";
+            this.btnDatBan.UseVisualStyleBackColor = true;
+            this.btnDatBan.Click += new System.EventHandler(this.btnDatBan_Click);
             // 
             // btnRemove
             // 
-            this.btnRemove.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Location = new System.Drawing.Point(256, 677);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRemove.Location = new System.Drawing.Point(285, 703);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(130, 54);
+            this.btnRemove.Size = new System.Drawing.Size(130, 45);
             this.btnRemove.TabIndex = 3;
             this.btnRemove.Text = "Xóa món";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(72, 677);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Location = new System.Drawing.Point(78, 704);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(108, 54);
+            this.btnCancel.Size = new System.Drawing.Size(108, 45);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Hủy bỏ";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -144,10 +158,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTableNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTableNumber.Location = new System.Drawing.Point(236, 12);
-            this.txtTableNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTableNumber.Location = new System.Drawing.Point(229, 11);
+            this.txtTableNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtTableNumber.Name = "txtTableNumber";
-            this.txtTableNumber.Size = new System.Drawing.Size(212, 37);
+            this.txtTableNumber.Size = new System.Drawing.Size(563, 37);
             this.txtTableNumber.TabIndex = 2;
             // 
             // label1
@@ -157,7 +171,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(154, 15);
+            this.label1.Location = new System.Drawing.Point(146, 13);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 31);
@@ -169,11 +183,11 @@
             this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(393, 622);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTotal.Location = new System.Drawing.Point(420, 627);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(297, 37);
+            this.txtTotal.Size = new System.Drawing.Size(450, 37);
             this.txtTotal.TabIndex = 2;
             // 
             // lblTotal
@@ -182,12 +196,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(208, 627);
+            this.lblTotal.Location = new System.Drawing.Point(248, 630);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(127, 31);
             this.lblTotal.TabIndex = 1;
             this.lblTotal.Text = "Tổng tiền";
+            this.lblTotal.Click += new System.EventHandler(this.lblTotal_Click);
             // 
             // lsvOrder
             // 
@@ -198,12 +213,14 @@
             this.colQuantity,
             this.colTotal});
             this.lsvOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lsvOrder.FullRowSelect = true;
             this.lsvOrder.GridLines = true;
             this.lsvOrder.HideSelection = false;
-            this.lsvOrder.Location = new System.Drawing.Point(9, 66);
-            this.lsvOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lsvOrder.Location = new System.Drawing.Point(6, 83);
+            this.lsvOrder.Margin = new System.Windows.Forms.Padding(2);
+            this.lsvOrder.MultiSelect = false;
             this.lsvOrder.Name = "lsvOrder";
-            this.lsvOrder.Size = new System.Drawing.Size(698, 535);
+            this.lsvOrder.Size = new System.Drawing.Size(864, 535);
             this.lsvOrder.TabIndex = 0;
             this.lsvOrder.UseCompatibleStateImageBehavior = false;
             this.lsvOrder.View = System.Windows.Forms.View.Details;
@@ -217,21 +234,21 @@
             // 
             this.colQuantity.Text = "Số lượng";
             this.colQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colQuantity.Width = 249;
+            this.colQuantity.Width = 202;
             // 
             // colTotal
             // 
             this.colTotal.Text = "Thành tiền";
             this.colTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colTotal.Width = 177;
+            this.colTotal.Width = 225;
             // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 810);
+            this.ClientSize = new System.Drawing.Size(1540, 845);
             this.Controls.Add(this.splitContainer1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OrderForm";
             this.Text = "OrderForm";
             this.Load += new System.EventHandler(this.OrderForm_Load);
@@ -259,7 +276,8 @@
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.FlowLayoutPanel monAnLayoutPanel;
+        private System.Windows.Forms.Button btnDatBan;
     }
 }
