@@ -107,10 +107,10 @@
             this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSearch.Location = new System.Drawing.Point(473, 45);
+            this.btnSearch.Location = new System.Drawing.Point(416, 45);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(0);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(50, 37);
+            this.btnSearch.Size = new System.Drawing.Size(56, 37);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -123,7 +123,7 @@
             this.txtSearch.Location = new System.Drawing.Point(9, 45);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(460, 37);
+            this.txtSearch.Size = new System.Drawing.Size(405, 37);
             this.txtSearch.TabIndex = 0;
             // 
             // btnDelete

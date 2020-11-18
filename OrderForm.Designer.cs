@@ -77,7 +77,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.lsvOrder);
             this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Size = new System.Drawing.Size(1540, 845);
-            this.splitContainer1.SplitterDistance = 617;
+            this.splitContainer1.SplitterDistance = 647;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -97,10 +97,10 @@
             this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSearch.Location = new System.Drawing.Point(562, 44);
+            this.btnSearch.Location = new System.Drawing.Point(461, 45);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(0);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(50, 37);
+            this.btnSearch.Size = new System.Drawing.Size(35, 37);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -114,26 +114,25 @@
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.MaximumSize = new System.Drawing.Size(467, 37);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(552, 37);
+            this.txtSearch.Size = new System.Drawing.Size(450, 37);
             this.txtSearch.TabIndex = 0;
             // 
             // btnDatBan
             // 
             this.btnDatBan.Enabled = false;
-            this.btnDatBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDatBan.Location = new System.Drawing.Point(723, 744);
+            this.btnDatBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatBan.Location = new System.Drawing.Point(507, 703);
             this.btnDatBan.Name = "btnDatBan";
-            this.btnDatBan.Size = new System.Drawing.Size(192, 45);
+            this.btnDatBan.Size = new System.Drawing.Size(159, 45);
             this.btnDatBan.TabIndex = 4;
-            this.btnDatBan.Text = "Đặt Bàn";
+            this.btnDatBan.Text = "Đặt bàn";
             this.btnDatBan.UseVisualStyleBackColor = true;
             this.btnDatBan.Click += new System.EventHandler(this.btnDatBan_Click);
             // 
             // btnRemove
             // 
-            this.btnRemove.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Location = new System.Drawing.Point(365, 745);
+            this.btnRemove.Location = new System.Drawing.Point(285, 703);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(130, 45);
@@ -145,7 +144,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(72, 745);
+            this.btnCancel.Location = new System.Drawing.Point(78, 704);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(108, 45);
@@ -159,10 +158,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTableNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTableNumber.Location = new System.Drawing.Point(307, 9);
+            this.txtTableNumber.Location = new System.Drawing.Point(229, 11);
             this.txtTableNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtTableNumber.Name = "txtTableNumber";
-            this.txtTableNumber.Size = new System.Drawing.Size(591, 37);
+            this.txtTableNumber.Size = new System.Drawing.Size(563, 37);
             this.txtTableNumber.TabIndex = 2;
             // 
             // label1
@@ -172,7 +171,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(224, 11);
+            this.label1.Location = new System.Drawing.Point(146, 13);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 31);
@@ -184,11 +183,11 @@
             this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(393, 622);
+            this.txtTotal.Location = new System.Drawing.Point(420, 627);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(688, 37);
+            this.txtTotal.Size = new System.Drawing.Size(450, 37);
             this.txtTotal.TabIndex = 2;
             // 
             // lblTotal
@@ -197,7 +196,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(208, 627);
+            this.lblTotal.Location = new System.Drawing.Point(248, 630);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(127, 31);
@@ -217,11 +216,11 @@
             this.lsvOrder.FullRowSelect = true;
             this.lsvOrder.GridLines = true;
             this.lsvOrder.HideSelection = false;
-            this.lsvOrder.Location = new System.Drawing.Point(6, 66);
+            this.lsvOrder.Location = new System.Drawing.Point(6, 83);
             this.lsvOrder.Margin = new System.Windows.Forms.Padding(2);
             this.lsvOrder.MultiSelect = false;
             this.lsvOrder.Name = "lsvOrder";
-            this.lsvOrder.Size = new System.Drawing.Size(1075, 535);
+            this.lsvOrder.Size = new System.Drawing.Size(864, 535);
             this.lsvOrder.TabIndex = 0;
             this.lsvOrder.UseCompatibleStateImageBehavior = false;
             this.lsvOrder.View = System.Windows.Forms.View.Details;
@@ -235,13 +234,13 @@
             // 
             this.colQuantity.Text = "Số lượng";
             this.colQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colQuantity.Width = 249;
+            this.colQuantity.Width = 202;
             // 
             // colTotal
             // 
             this.colTotal.Text = "Thành tiền";
             this.colTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colTotal.Width = 177;
+            this.colTotal.Width = 225;
             // 
             // OrderForm
             // 
