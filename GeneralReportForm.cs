@@ -19,16 +19,21 @@ namespace CafeManagementSystem
             InitializeComponent();
         }
 
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             ReceiptDao r = new ReceiptDao();
             var l = r.GetReceiptList();
-            var curDate = l[0].PrintDate.Date;
-            double TongNgay = 0, TongThang = 0, TongNam = 0;
-            for (int i = 0; i < l.Count-1; i++)
+            var beginDate = l[0].PrintDate.Date;
+            var endDate = DateTime.Now.Date;
+            do
             {
-                if (l[i].PrintDate.Date == l[i + 1].PrintDate.Date) ;
+                beginDate.AddDays(1);
+                ListViewItem lvi = lsvGeneralReport.Items.Add("" + endDate);
             }
+            while (beginDate < endDate);
+                double TongNgay = 0, TongThang = 0, TongNam = 0;
+            
             switch (comboBox1.SelectedIndex)
             {
                 case 0: ; break;

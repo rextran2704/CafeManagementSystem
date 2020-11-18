@@ -53,7 +53,7 @@
             this.lsvGeneralReport.GridLines = true;
             this.lsvGeneralReport.HideSelection = false;
             this.lsvGeneralReport.Location = new System.Drawing.Point(16, 153);
-            this.lsvGeneralReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lsvGeneralReport.Margin = new System.Windows.Forms.Padding(4);
             this.lsvGeneralReport.Name = "lsvGeneralReport";
             this.lsvGeneralReport.Size = new System.Drawing.Size(819, 742);
             this.lsvGeneralReport.TabIndex = 15;
@@ -94,7 +94,7 @@
             this.lsvReceiptDetail.GridLines = true;
             this.lsvReceiptDetail.HideSelection = false;
             this.lsvReceiptDetail.Location = new System.Drawing.Point(844, 153);
-            this.lsvReceiptDetail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lsvReceiptDetail.Margin = new System.Windows.Forms.Padding(4);
             this.lsvReceiptDetail.MultiSelect = false;
             this.lsvReceiptDetail.Name = "lsvReceiptDetail";
             this.lsvReceiptDetail.Size = new System.Drawing.Size(679, 742);
@@ -124,9 +124,10 @@
             this.ClientSize = new System.Drawing.Size(1540, 846);
             this.Controls.Add(this.lsvReceiptDetail);
             this.Controls.Add(this.lsvGeneralReport);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "IncomeReportForm";
             this.Text = "PaymentReportForm";
+            this.Load += new System.EventHandler(this.IncomeReportForm_Load);
             this.ResumeLayout(false);
 
         }
