@@ -183,7 +183,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="images\icon-search.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="images\background-login-2.png" />
   </ItemGroup>
