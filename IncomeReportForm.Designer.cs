@@ -52,12 +52,14 @@
             this.lsvGeneralReport.FullRowSelect = true;
             this.lsvGeneralReport.GridLines = true;
             this.lsvGeneralReport.HideSelection = false;
-            this.lsvGeneralReport.Location = new System.Drawing.Point(12, 124);
+            this.lsvGeneralReport.Location = new System.Drawing.Point(16, 153);
+            this.lsvGeneralReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lsvGeneralReport.Name = "lsvGeneralReport";
-            this.lsvGeneralReport.Size = new System.Drawing.Size(615, 604);
+            this.lsvGeneralReport.Size = new System.Drawing.Size(819, 742);
             this.lsvGeneralReport.TabIndex = 15;
             this.lsvGeneralReport.UseCompatibleStateImageBehavior = false;
             this.lsvGeneralReport.View = System.Windows.Forms.View.Details;
+            this.lsvGeneralReport.SelectedIndexChanged += new System.EventHandler(this.lsvGeneralReport_SelectedIndexChanged);
             // 
             // colId
             // 
@@ -91,10 +93,11 @@
             this.lsvReceiptDetail.FullRowSelect = true;
             this.lsvReceiptDetail.GridLines = true;
             this.lsvReceiptDetail.HideSelection = false;
-            this.lsvReceiptDetail.Location = new System.Drawing.Point(633, 124);
+            this.lsvReceiptDetail.Location = new System.Drawing.Point(844, 153);
+            this.lsvReceiptDetail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lsvReceiptDetail.MultiSelect = false;
             this.lsvReceiptDetail.Name = "lsvReceiptDetail";
-            this.lsvReceiptDetail.Size = new System.Drawing.Size(510, 604);
+            this.lsvReceiptDetail.Size = new System.Drawing.Size(679, 742);
             this.lsvReceiptDetail.TabIndex = 16;
             this.lsvReceiptDetail.UseCompatibleStateImageBehavior = false;
             this.lsvReceiptDetail.View = System.Windows.Forms.View.Details;
@@ -116,11 +119,12 @@
             // 
             // IncomeReportForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1155, 687);
+            this.ClientSize = new System.Drawing.Size(1540, 846);
             this.Controls.Add(this.lsvReceiptDetail);
             this.Controls.Add(this.lsvGeneralReport);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "IncomeReportForm";
             this.Text = "PaymentReportForm";
             this.ResumeLayout(false);

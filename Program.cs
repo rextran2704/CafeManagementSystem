@@ -18,7 +18,7 @@ namespace CafeManagementSystem
         {
              Application.EnableVisualStyles();
              Application.SetCompatibleTextRenderingDefault(false);
-             Application.Run(new MainForm());
+             Application.Run(new GeneralReportForm());
             //List<Account> ls = AccountDao.GetAccountList();
             //Console.WriteLine(ls.Count());
         }

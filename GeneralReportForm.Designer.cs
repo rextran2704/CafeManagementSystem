@@ -49,9 +49,10 @@
             this.lsvGeneralReport.FullRowSelect = true;
             this.lsvGeneralReport.GridLines = true;
             this.lsvGeneralReport.HideSelection = false;
-            this.lsvGeneralReport.Location = new System.Drawing.Point(12, 132);
+            this.lsvGeneralReport.Location = new System.Drawing.Point(16, 162);
+            this.lsvGeneralReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lsvGeneralReport.Name = "lsvGeneralReport";
-            this.lsvGeneralReport.Size = new System.Drawing.Size(1062, 531);
+            this.lsvGeneralReport.Size = new System.Drawing.Size(1415, 653);
             this.lsvGeneralReport.TabIndex = 1;
             this.lsvGeneralReport.UseCompatibleStateImageBehavior = false;
             this.lsvGeneralReport.View = System.Windows.Forms.View.Details;
@@ -84,18 +85,21 @@
             "Ngày",
             "Tháng",
             "Năm"});
-            this.comboBox1.Location = new System.Drawing.Point(159, 54);
+            this.comboBox1.Location = new System.Drawing.Point(212, 66);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(206, 39);
+            this.comboBox1.Size = new System.Drawing.Size(273, 47);
             this.comboBox1.TabIndex = 2;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // GeneralReportForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1086, 675);
+            this.ClientSize = new System.Drawing.Size(1448, 831);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lsvGeneralReport);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GeneralReportForm";
             this.Text = "GeneralReportForm";
             this.ResumeLayout(false);

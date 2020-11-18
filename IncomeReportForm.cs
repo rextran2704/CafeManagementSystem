@@ -21,5 +21,10 @@ namespace CafeManagementSystem
         {
 
         }
+
+        private void lsvGeneralReport_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
