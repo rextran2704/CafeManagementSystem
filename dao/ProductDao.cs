@@ -43,7 +43,7 @@ namespace CafeManagementSystem.dao
                     double price = (double)reader.GetDecimal(2);
                     int quantity = reader.GetInt32(3);
                     string image = reader.GetString(4);
-                    string description = "sss";
+                    string description = reader.IsDBNull(5) ? null : reader.GetString(5);
                     int categoryID = reader.GetInt32(6);
 
                     ProductList.Add(new Product(id, name, price, quantity, image, description, categoryID));
