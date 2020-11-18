@@ -21,5 +21,14 @@ namespace CafeManagementSystem
         {
 
         }
+
+        private void IncomeReportForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loadReceipsToForm()
+        {
+        }
     }
 }
