@@ -18,9 +18,9 @@ namespace CafeManagementSystem
         {
             InitializeComponent();
         }
-
-        private void AccountForm_Load(object sender, EventArgs e)
+        private void LoadTable()
         {
+            lsvAccount.Items.Clear();
             AccountDao AcDao = new AccountDao();
             List<Account> ls = AcDao.GetAccountList();
             foreach (Account a in ls)
@@ -31,6 +31,11 @@ namespace CafeManagementSystem
                 else item.SubItems.Add("Quản Lý");
                 item.SubItems.Add(a.EmployeeId.ToString());
             }
+
+        }
+        private void AccountForm_Load(object sender, EventArgs e)
+        {
+            LoadTable();
             cboRole.Items.AddRange(new string[] { "Nhân  Viên", "Quản Lý" });
         }
 
@@ -73,16 +78,27 @@ namespace CafeManagementSystem
         {
             if (lsvAccount.SelectedItems.Count > 0)
             {
+                AccountDao acDao = new AccountDao();
+                Account a = acDao.GetAccountByUsername(lsvAccount.SelectedItems[0].SubItems[1].Text);
+                a.Username = txtUsername.Text;
+                a.EmployeeId = Convert.ToInt32(txtEmployeeId.Text);
+                a.UserRole = cboRole.SelectedIndex+1;
                 lsvAccount.SelectedItems[0].SubItems[1].Text = txtUsername.Text;
                 lsvAccount.SelectedItems[0].SubItems[3].Text = txtEmployeeId.Text;
-                lsvAccount.SelectedItems[0].SubItems[2].Text = ""+cboRole.SelectedIndex;
-                AccountDao acDao = new AccountDao();
-                textBox1.Text = "";
-                textBox2.Text = "";
-                textBox3.Text = "";
-                textBox4.Text = "";
-                textBox5.Text = "";
-                textBox6.Text = "";
+                lsvAccount.SelectedItems[0].SubItems[2].Text = cboRole.SelectedItem.ToString();
+                acDao.UpdateAccount(a);
+                txtEmployeeId.Text = "";
+                txtUsername.Text = "";
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            AccountDao acDao = new AccountDao();
+            if (txtEmployeeId.Text.Length > 0 && txtUsername.Text.Length > 0)
+            {
+                acDao.AddAccount(new Account(txtUsername.Text, txtUsername.Text, cboRole.SelectedIndex + 1, Convert.ToInt32(txtEmployeeId.Text)));
+                LoadTable();
             }
         }
     }
