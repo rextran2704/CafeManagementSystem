@@ -33,7 +33,7 @@
             this.monAnLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnCalculate = new System.Windows.Forms.Button();
+            //this.btnCalculate = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtTableNumber = new System.Windows.Forms.TextBox();
@@ -117,16 +117,16 @@
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCalculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalculate.Location = new System.Drawing.Point(830, 745);
-            this.btnCalculate.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(192, 45);
-            this.btnCalculate.TabIndex = 3;
-            this.btnCalculate.Text = "Tính tiền";
-            this.btnCalculate.UseVisualStyleBackColor = true;
-            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
+            //this.btnCalculate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            //this.btnCalculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.btnCalculate.Location = new System.Drawing.Point(830, 745);
+            //this.btnCalculate.Margin = new System.Windows.Forms.Padding(2);
+            //this.btnCalculate.Name = "btnCalculate";
+            //this.btnCalculate.Size = new System.Drawing.Size(192, 45);
+            //this.btnCalculate.TabIndex = 3;
+            //this.btnCalculate.Text = "Tính tiền";
+            //this.btnCalculate.UseVisualStyleBackColor = true;
+            //this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // btnRemove
             // 

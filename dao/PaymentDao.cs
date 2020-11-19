@@ -101,5 +101,51 @@ namespace CafeManagementSystem.dao
             dao.Con.Close();
             return (nRows > 0);
         }
+
+        public double GetByMonth(string month)
+        {
+            double all = 0;
+            List<Payment> ReceiptList = new List<Payment>();
+            Dao dao = new Dao();
+            try
+            {
+                string sqlStatement = "SELECT SUM(TotalFee) FROM Payment where FORMAT(PayDate,'MM')= '" + month + "'";
+                System.Data.SqlClient.SqlDataReader reader = dao.Get(sqlStatement);
+                if (reader.Read())
+                {
+                    all = (double)reader.GetDecimal(0);
+                }
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            dao.Con.Close();
+            return all;
+        }
+
+        public double GetByYear(int year)
+        {
+            double all = 0;
+            List<Receipt> ReceiptList = new List<Receipt>();
+            Dao dao = new Dao();
+            try
+            {
+                string sqlStatement = "SELECT SUM(TotalFee) FROM Payment where FORMAT(PayDate,'yyyy')= '" + year + "'";
+                System.Data.SqlClient.SqlDataReader reader = dao.Get(sqlStatement);
+                if (reader.Read())
+                {
+                    all = (double)reader.GetDecimal(0);
+                }
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            dao.Con.Close();
+            return all;
+        }
     }
 }
