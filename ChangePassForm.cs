@@ -17,6 +17,11 @@ namespace CafeManagementSystem
         {
             InitializeComponent();
         }
+        public ChangePassForm(string username)
+        {
+            InitializeComponent();
+            this.textBox1.Text = username;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
