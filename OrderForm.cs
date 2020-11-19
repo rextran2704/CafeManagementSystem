@@ -119,7 +119,6 @@ namespace CafeManagementSystem
         void calculateTotal() 
         {
             btnDatBan.Enabled = true;
-
             double sum = 0;
             foreach (var myitem in productsMap)
             {
@@ -131,8 +130,6 @@ namespace CafeManagementSystem
 
         private void btnDatBan_Click(object sender, EventArgs e)
         {
-
-
 
             if (string.IsNullOrEmpty(txtTotal.Text) && string.IsNullOrEmpty(txtTableNumber.Text)) {
                 MessageBox.Show("Vui lòng điền số bàn và chọn sản phẩm và nhấn tính tiền!");
@@ -162,6 +159,11 @@ namespace CafeManagementSystem
             catch (Exception) {
                 MessageBox.Show("nhap so ban dung dinh dang");
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
