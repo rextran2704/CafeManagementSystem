@@ -22,13 +22,14 @@ namespace CafeManagementSystem
 
         }
 
-        private void IncomeReportForm_Load(object sender, EventArgs e)
+        private void lsvGeneralReport_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void loadReceipsToForm()
+        private void IncomeReportForm_Load(object sender, EventArgs e)
         {
+
         }
     }
 }

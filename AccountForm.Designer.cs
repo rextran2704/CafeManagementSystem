@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountForm));
             this.lsvAccount = new System.Windows.Forms.ListView();
+            this.colId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colUsername = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colRole = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colEmployeeId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,10 +45,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.colId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colUsername = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colRole = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colEmployeeId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lsvAccount
@@ -66,6 +66,29 @@
             this.lsvAccount.TabIndex = 0;
             this.lsvAccount.UseCompatibleStateImageBehavior = false;
             this.lsvAccount.View = System.Windows.Forms.View.Details;
+            this.lsvAccount.SelectedIndexChanged += new System.EventHandler(this.lsvAccount_SelectedIndexChanged);
+            // 
+            // colId
+            // 
+            this.colId.Text = "ID";
+            // 
+            // colUsername
+            // 
+            this.colUsername.Text = "Tên đăng nhập";
+            this.colUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colUsername.Width = 185;
+            // 
+            // colRole
+            // 
+            this.colRole.Text = "Quyền";
+            this.colRole.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colRole.Width = 150;
+            // 
+            // colEmployeeId
+            // 
+            this.colEmployeeId.Text = "Mã nhân viên";
+            this.colEmployeeId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colEmployeeId.Width = 171;
             // 
             // btnSearch
             // 
@@ -140,6 +163,7 @@
             this.cboRole.Name = "cboRole";
             this.cboRole.Size = new System.Drawing.Size(265, 38);
             this.cboRole.TabIndex = 8;
+            this.cboRole.SelectedIndexChanged += new System.EventHandler(this.cboRole_SelectedIndexChanged);
             // 
             // btnDelete
             // 
@@ -151,6 +175,7 @@
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -162,6 +187,7 @@
             this.btnEdit.TabIndex = 10;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -173,28 +199,7 @@
             this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // colId
-            // 
-            this.colId.Text = "ID";
-            // 
-            // colUsername
-            // 
-            this.colUsername.Text = "Tên đăng nhập";
-            this.colUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colUsername.Width = 185;
-            // 
-            // colRole
-            // 
-            this.colRole.Text = "Quyền";
-            this.colRole.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colRole.Width = 150;
-            // 
-            // colEmployeeId
-            // 
-            this.colEmployeeId.Text = "Mã nhân viên";
-            this.colEmployeeId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colEmployeeId.Width = 171;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // AccountForm
             // 
@@ -217,6 +222,7 @@
             this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "AccountForm";
             this.Text = "AccountForm";
+            this.Load += new System.EventHandler(this.AccountForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
