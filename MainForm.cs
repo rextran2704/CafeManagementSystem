@@ -32,7 +32,7 @@ namespace CafeManagementSystem
 
         private void Mi_Click(object sender, EventArgs e)
         {
-            new loginForm(this);
+            openChildForm(new loginForm(this));
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
