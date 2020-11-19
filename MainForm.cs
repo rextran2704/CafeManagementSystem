@@ -25,20 +25,33 @@ namespace CafeManagementSystem
             this.WindowState = FormWindowState.Maximized;
             txtUsername.Select();
             dashboardToolStripMenuItem.Enabled = false;
+            //menuStrip1.Hide();
         }
 
         private void Login()
         {
             //MessageBox.Show("Login Action");
             AccountDao AcDAO = new AccountDao();
+            EmployeeDao EmDao = new EmployeeDao();
             bool LoginSuccess = AcDAO.CheckLogin(txtUsername.Text, txtPassword.Text);
             if (LoginSuccess) { 
-                MessageBox.Show("LoginSuccess");
+                //MessageBox.Show("LoginSuccess");
                 User = AcDAO.GetAccountByUsername(txtUsername.Text);
                 txtUsername.Text = "";
                 txtPassword.Text = "";
-                welcomeToolStripMenuItem.Text = "Xin chào " + User.Username;
+                welcomeToolStripMenuItem.Text =  EmDao.GetEmployeeByID(User.EmployeeId).EmployeeName;
                 // chuyển đến form Order
+                /*
+                menuStrip1.Show();
+                if(User.UserRole == 1)
+                {
+                    accountToolStripMenuItem.Visible = false;
+                    productToolStripMenuItem.Visible = false;
+                    employeeToolStripMenuItem.Visible = false;
+                    categoryToolStripMenuItem.Visible = false;
+                    reportToolStripMenuItem.Visible = false;
+                }
+                */
             }
             else MessageBox.Show("LoginFailed");
         }
@@ -55,8 +68,15 @@ namespace CafeManagementSystem
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            
             Login();
         }
+        /*
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        */
 
         private void MainForm_KeyPress(object sender, KeyPressEventArgs e)
         {

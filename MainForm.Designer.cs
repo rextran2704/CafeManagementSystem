@@ -46,7 +46,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnConfirm = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -191,7 +191,7 @@
             this.generalReportToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.generalReportToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.generalReportToolStripMenuItem.Name = "generalReportToolStripMenuItem";
-            this.generalReportToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.generalReportToolStripMenuItem.Size = new System.Drawing.Size(179, 38);
             this.generalReportToolStripMenuItem.Text = "Chung";
             this.generalReportToolStripMenuItem.Click += new System.EventHandler(this.generalReportToolStripMenuItem_Click);
             // 
@@ -203,7 +203,7 @@
             this.incomeReportToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.incomeReportToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.incomeReportToolStripMenuItem.Name = "incomeReportToolStripMenuItem";
-            this.incomeReportToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.incomeReportToolStripMenuItem.Size = new System.Drawing.Size(179, 38);
             this.incomeReportToolStripMenuItem.Text = "Thu";
             this.incomeReportToolStripMenuItem.Click += new System.EventHandler(this.incomeReportToolStripMenuItem_Click);
             // 
@@ -215,7 +215,7 @@
             this.paymentReportToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.paymentReportToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.paymentReportToolStripMenuItem1.Name = "paymentReportToolStripMenuItem1";
-            this.paymentReportToolStripMenuItem1.Size = new System.Drawing.Size(196, 38);
+            this.paymentReportToolStripMenuItem1.Size = new System.Drawing.Size(179, 38);
             this.paymentReportToolStripMenuItem1.Text = "Chi";
             this.paymentReportToolStripMenuItem1.Click += new System.EventHandler(this.paymentReportToolStripMenuItem1_Click);
             // 
@@ -250,7 +250,7 @@
             this.mainPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.mainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainPanel.BackgroundImage")));
             this.mainPanel.Controls.Add(this.label2);
-            this.mainPanel.Controls.Add(this.btnConfirm);
+            this.mainPanel.Controls.Add(this.button1);
             this.mainPanel.Controls.Add(this.txtPassword);
             this.mainPanel.Controls.Add(this.label1);
             this.mainPanel.Controls.Add(this.txtUsername);
@@ -275,19 +275,19 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Đăng nhập";
             // 
-            // btnConfirm
+            // button1
             // 
-            this.btnConfirm.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.btnConfirm.Location = new System.Drawing.Point(712, 352);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(122, 39);
-            this.btnConfirm.TabIndex = 2;
-            this.btnConfirm.Text = "Xác nhận";
-            this.btnConfirm.UseVisualStyleBackColor = false;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.button1.Location = new System.Drawing.Point(714, 356);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 39);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Xác nhận";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // txtPassword
             // 
@@ -373,12 +373,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem orderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem welcomeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }
 
