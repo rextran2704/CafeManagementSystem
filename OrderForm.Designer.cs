@@ -97,7 +97,7 @@
             this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSearch.Location = new System.Drawing.Point(461, 45);
+            this.btnSearch.Location = new System.Drawing.Point(444, 45);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(0);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(35, 37);
@@ -114,7 +114,7 @@
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.MaximumSize = new System.Drawing.Size(467, 37);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(450, 37);
+            this.txtSearch.Size = new System.Drawing.Size(433, 37);
             this.txtSearch.TabIndex = 0;
             // 
             // btnDatBan
@@ -161,7 +161,7 @@
             this.txtTableNumber.Location = new System.Drawing.Point(229, 11);
             this.txtTableNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtTableNumber.Name = "txtTableNumber";
-            this.txtTableNumber.Size = new System.Drawing.Size(563, 37);
+            this.txtTableNumber.Size = new System.Drawing.Size(564, 37);
             this.txtTableNumber.TabIndex = 2;
             // 
             // label1
@@ -171,12 +171,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(146, 13);
+            this.label1.Location = new System.Drawing.Point(111, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 31);
+            this.label1.Size = new System.Drawing.Size(102, 31);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Bàn";
+            this.label1.Text = "Số Bàn";
             // 
             // txtTotal
             // 
@@ -187,7 +187,7 @@
             this.txtTotal.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(450, 37);
+            this.txtTotal.Size = new System.Drawing.Size(451, 37);
             this.txtTotal.TabIndex = 2;
             // 
             // lblTotal
@@ -220,7 +220,7 @@
             this.lsvOrder.Margin = new System.Windows.Forms.Padding(2);
             this.lsvOrder.MultiSelect = false;
             this.lsvOrder.Name = "lsvOrder";
-            this.lsvOrder.Size = new System.Drawing.Size(864, 535);
+            this.lsvOrder.Size = new System.Drawing.Size(865, 535);
             this.lsvOrder.TabIndex = 0;
             this.lsvOrder.UseCompatibleStateImageBehavior = false;
             this.lsvOrder.View = System.Windows.Forms.View.Details;
