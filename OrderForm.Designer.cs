@@ -189,7 +189,6 @@
             this.lblTotal.Size = new System.Drawing.Size(127, 31);
             this.lblTotal.TabIndex = 1;
             this.lblTotal.Text = "Tổng tiền";
-            this.lblTotal.Click += new System.EventHandler(this.lblTotal_Click);
             // 
             // lsvOrder
             // 
