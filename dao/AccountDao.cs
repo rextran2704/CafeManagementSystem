@@ -24,6 +24,25 @@ namespace CafeManagementSystem.dao
             dao.Con.Close();
             return account;
         }
+        public List<Account> SearchAccountByName(string name)
+        {
+            List<Account> accountList = new List<Account>();
+            Dao dao = new Dao();
+            string sqlStatement = "SELECT AccountID, Username, Password, UserRole, EmployeeID FROM Account WHERE Username LIKE N'%" + name + "%'";
+            System.Data.SqlClient.SqlDataReader reader = dao.Get(sqlStatement);
+            if (reader == null) return null;
+            while (reader.Read())
+            {
+                int id = reader.GetInt32(0);
+                string username = reader.GetString(1);
+                string password = reader.GetString(2);
+                int role = reader.GetInt32(3);
+                int employeeId = reader.GetInt32(4);
+                accountList.Add(new Account(id, username, password, role, employeeId));
+            }
+            dao.Con.Close();
+            return accountList;
+        }
         public List<Account> GetAccountList()
         {
             List<Account> accountList = new List<Account>();
