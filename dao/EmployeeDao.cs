@@ -96,14 +96,15 @@ namespace CafeManagementSystem.dao
             {
                 int nRows;
                 Dao dao = new Dao();
-                string sqlStatement = "INSERT INTO Employee(EmployeeName, Gender, Position, StartDate, Address, PhoneNumber) VALUES (@name, @gender, @position, @date, @address, @phone)";
+                //string sqlStatement = "INSERT INTO Employee(EmployeeName, Gender, Position, StartDate, Address, PhoneNumber) VALUES (@name, @gender, @position, @date, @address, @phone)";
+                string sqlStatement = "INSERT INTO Employee(EmployeeName, Gender, Position, StartDate, Address, PhoneNumber) VALUES (@name, @gender, @position,GetDate(), @address, @phone)";
                 using (SqlCommand command = dao.Add(sqlStatement))
                 {
                     command.CommandText = sqlStatement;
                     command.Parameters.AddWithValue("@name", employee.EmployeeName);
                     command.Parameters.AddWithValue("@gender", employee.Gender);
                     command.Parameters.AddWithValue("@position", employee.Position);
-                    command.Parameters.AddWithValue("@date", employee.StartDate);
+                    //command.Parameters.AddWithValue("@date", employee.StartDate);
                     command.Parameters.AddWithValue("@address", employee.Address);
                     command.Parameters.AddWithValue("@phone", employee.PhoneNumber);
                     nRows = command.ExecuteNonQuery();
