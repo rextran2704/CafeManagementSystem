@@ -132,7 +132,19 @@ namespace CafeManagementSystem
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            if (txtSearch.Text.Length > 0)
+            {
 
+                lsvEmployee.Items.Clear();
+                EmployeeDao EmDao = new EmployeeDao();
+                List<Employee> ls = EmDao.SearchEmployeeByName(txtSearch.Text);
+                foreach (Employee a in ls)
+                {
+                    ListViewItem item = lsvEmployee.Items.Add(a.EmployeeID.ToString());
+                    item.SubItems.Add(a.EmployeeName);
+                    item.SubItems.Add(a.Position);
+                }
+            }
         }
     }
 }

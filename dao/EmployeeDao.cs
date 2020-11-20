@@ -31,7 +31,7 @@ namespace CafeManagementSystem.dao
         {
             List<Employee> employeeList = new List<Employee>();
             Dao dao = new Dao();
-            string sqlStatement = "SELECT EmployeeID, Gender, Position, StartDate, Address, PhoneNumber From Employee WHERE EmployeeName LIKE N'%" + name + "%'";
+            string sqlStatement = "SELECT EmployeeID, Gender, Position, StartDate, Address, PhoneNumber,EmployeeName From Employee WHERE EmployeeName LIKE N'%" + name + "%'";
             System.Data.SqlClient.SqlDataReader reader = dao.Get(sqlStatement);
             while (reader.Read())
             {
@@ -41,7 +41,8 @@ namespace CafeManagementSystem.dao
                 DateTime date = reader.GetDateTime(3);
                 string address = reader.GetString(4);
                 string phone = reader.GetString(5);
-                employeeList.Add(new Employee(id, name, gender, position, date, address, phone));
+                string Name = reader.GetString(6);
+                employeeList.Add(new Employee(id, Name, gender, position, date, address, phone));
             }
             dao.Con.Close();
             return employeeList;
