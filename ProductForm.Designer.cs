@@ -87,8 +87,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.label2);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(4);
-            this.splitContainer1.Size = new System.Drawing.Size(1540, 845);
-            this.splitContainer1.SplitterDistance = 660;
+            this.splitContainer1.Size = new System.Drawing.Size(1444, 845);
+            this.splitContainer1.SplitterDistance = 618;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -100,6 +100,7 @@
             this.monAnLayoutPanel.Name = "monAnLayoutPanel";
             this.monAnLayoutPanel.Size = new System.Drawing.Size(521, 973);
             this.monAnLayoutPanel.TabIndex = 2;
+            this.monAnLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.monAnLayoutPanel_Paint);
             // 
             // btnSearch
             // 
@@ -107,7 +108,7 @@
             this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSearch.Location = new System.Drawing.Point(416, 45);
+            this.btnSearch.Location = new System.Drawing.Point(357, 45);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(0);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(56, 37);
@@ -123,7 +124,7 @@
             this.txtSearch.Location = new System.Drawing.Point(9, 45);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(405, 37);
+            this.txtSearch.Size = new System.Drawing.Size(346, 37);
             this.txtSearch.TabIndex = 0;
             // 
             // btnDelete
@@ -136,7 +137,7 @@
             this.btnDelete.TabIndex = 24;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnDelete.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnEdit
             // 
@@ -148,6 +149,7 @@
             this.btnEdit.TabIndex = 25;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -159,6 +161,7 @@
             this.btnAdd.TabIndex = 26;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // cboCategory
             // 
@@ -273,7 +276,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1540, 845);
+            this.ClientSize = new System.Drawing.Size(1444, 845);
             this.Controls.Add(this.splitContainer1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ProductForm";

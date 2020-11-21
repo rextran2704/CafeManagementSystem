@@ -161,5 +161,10 @@ namespace CafeManagementSystem
         {
             this.Close();
         }
+
+        private void monAnLayoutPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

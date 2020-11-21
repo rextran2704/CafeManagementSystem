@@ -15,6 +15,7 @@ namespace CafeManagementSystem
     public partial class ProductForm : Form
     {
         Dictionary<Product, int> productsMap = new Dictionary<Product, int>();
+        Dictionary<int, int> CategoryMap = new Dictionary<int, int>();
         List<Product> productList = new List<Product>();
 
         public ProductForm()
@@ -45,24 +46,32 @@ namespace CafeManagementSystem
             txtQuantity.Text = prodl.Quantity.ToString();
             txtImage.Text = prodl.Image;
             txtDescription.Text = prodl.Description;
+            cboCategory.SelectedIndex = CategoryMap[prodl.CategoryID];
 
         }
         void loadProductsToSearch(List<Product> products) {
 
             monAnLayoutPanel.Controls.Clear();
-            if (products.Count<= 0) return;
+            if (products.Count <= 0) return;
             foreach (Product item in products)
             {
                 monAnLayoutPanel.Controls.Add(customButton("", item.ProductName));
+
             }
         }
         private void OrderForm_Load(object sender, EventArgs e)
         {
             productList = new ProductDao().GetProductList();
             loadProductsToSearch(productList);
+            List<Category> ls = new CategoryDao().GetCategoryList();
+            for (int i = 0; i < ls.Count; i++)
+            {
+                cboCategory.Items.Add(ls[i].CategoryName);
+                CategoryMap.Add(ls[i].CategoryID, i);
+            }
         }
 
-      
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             List<Product> prods = new ProductDao().SearchProductListByName(txtSearch.Text);
@@ -71,23 +80,89 @@ namespace CafeManagementSystem
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
- 
+            if (txtName.Text.Length > 0)
+            {
+                try
+                {
+                    if (new ProductDao().RemoveProductByName(txtName.Text))
+                    {
+                        loadProductsToSearch(new ProductDao().GetProductList());
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Failed : " + ex.Message);
+                }
+            }
+            txtName.Text = "";
+            txtPrice.Text = "";
+            txtImage.Text = "";
+            txtQuantity.Text = "";
+            txtDescription.Text = "";
         }
 
-        private void btnCalculate_Click(object sender, EventArgs e)
+        
+
+        private void monAnLayoutPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-        private void btnDatBan_Click(object sender, EventArgs e)
+        private int GetKeyByValueFromDictionary(int value) {
+            foreach (KeyValuePair<int, int> p in CategoryMap)
+            {
+                if (p.Value == value) return p.Key;
+            }
+            return -1;
+        }
+        private void btnEdit_Click(object sender, EventArgs e)
         {
+            if (txtName.Text.Length > 0 && txtPrice.Text.Length > 0 && txtQuantity.Text.Length > 0)
+            {
 
-          
+                try
+                {
+                    if (new ProductDao().UpdateProduct(new Product(txtName.Text, Double.Parse(txtPrice.Text), Convert.ToInt32(txtQuantity.Text), txtImage.Text, txtDescription.Text, GetKeyByValueFromDictionary(cboCategory.SelectedIndex))))
+                    {
+                        loadProductsToSearch(new ProductDao().GetProductList());
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Failed : " + ex.Message);
+                }
+
+            }
+            txtName.Text = "";
+            txtPrice.Text = "";
+            txtImage.Text = "";
+            txtQuantity.Text = "";
+            txtDescription.Text = "";
+            loadProductsToSearch(new ProductDao().GetProductList());
+
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (txtName.Text.Length > 0 && txtPrice.Text.Length > 0 && txtQuantity.Text.Length > 0)
+            {
 
-        }
+                try
+                {
+                    if (new ProductDao().AddProduct(new Product(txtName.Text, Double.Parse(txtPrice.Text), Convert.ToInt32(txtQuantity.Text), txtImage.Text, txtDescription.Text, GetKeyByValueFromDictionary(cboCategory.SelectedIndex))))
+                    {
+                        loadProductsToSearch(new ProductDao().GetProductList());
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Failed : " + ex.Message);
+                }
+                txtName.Text = "";
+                txtPrice.Text = "";
+                txtImage.Text = "";
+                txtQuantity.Text = "";
+                txtDescription.Text = "";
+            }
+        } 
     }
 }
