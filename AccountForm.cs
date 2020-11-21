@@ -20,6 +20,7 @@ namespace CafeManagementSystem
         }
         private void LoadTable()
         {
+            cboRole.DropDownStyle = ComboBoxStyle.DropDownList;
             lsvAccount.Items.Clear();
             AccountDao AcDao = new AccountDao();
             List<Account> ls = AcDao.GetAccountList();
@@ -36,7 +37,7 @@ namespace CafeManagementSystem
         private void AccountForm_Load(object sender, EventArgs e)
         {
             LoadTable();
-            cboRole.Items.AddRange(new string[] { "Nhân  Viên", "Quản Lý" });
+            cboRole.Items.AddRange(new string[] { "Nhân Viên", "Quản Lý" });
         }
 
         private void lsvAccount_SelectedIndexChanged(object sender, EventArgs e)
