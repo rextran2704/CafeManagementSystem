@@ -102,5 +102,24 @@ namespace CafeManagementSystem
                 LoadTable();
             }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (txtSearch.Text.Length > 0)
+            {
+
+                lsvAccount.Items.Clear();
+                AccountDao AcDao = new AccountDao();
+                List<Account> ls = AcDao.SearchAccountByName(txtSearch.Text);
+                foreach (Account a in ls)
+                {
+                    ListViewItem item = lsvAccount.Items.Add(a.Id.ToString());
+                    item.SubItems.Add(a.Username);
+                    if (a.UserRole == 1) item.SubItems.Add("Nhân Viên");
+                    else item.SubItems.Add("Quản Lý");
+                    item.SubItems.Add(a.EmployeeId.ToString());
+                }
+            }
+        }
     }
 }

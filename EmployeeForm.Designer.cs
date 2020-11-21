@@ -70,6 +70,7 @@
             this.lsvEmployee.TabIndex = 0;
             this.lsvEmployee.UseCompatibleStateImageBehavior = false;
             this.lsvEmployee.View = System.Windows.Forms.View.Details;
+            this.lsvEmployee.SelectedIndexChanged += new System.EventHandler(this.lsvEmployee_SelectedIndexChanged);
             // 
             // colId
             // 
@@ -101,6 +102,7 @@
             this.btnSearch.Size = new System.Drawing.Size(52, 37);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -204,6 +206,7 @@
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -215,6 +218,7 @@
             this.btnEdit.TabIndex = 10;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -226,6 +230,7 @@
             this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label6
             // 
@@ -243,6 +248,7 @@
             this.txtStartDate.ReadOnly = true;
             this.txtStartDate.Size = new System.Drawing.Size(265, 37);
             this.txtStartDate.TabIndex = 7;
+            this.txtStartDate.TextChanged += new System.EventHandler(this.txtStartDate_TextChanged);
             // 
             // EmployeeForm
             // 
@@ -271,6 +277,7 @@
             this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "EmployeeForm";
             this.Text = "EmployeeForm";
+            this.Load += new System.EventHandler(this.EmployeeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

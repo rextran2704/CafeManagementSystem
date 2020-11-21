@@ -54,7 +54,11 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+<<<<<<< HEAD
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> 6ea14831c1d8d4ef7f35c7f686d75275a60b2df1
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -75,10 +79,17 @@
             this.splitContainer1.Panel2.Controls.Add(this.txtTotal);
             this.splitContainer1.Panel2.Controls.Add(this.lblTotal);
             this.splitContainer1.Panel2.Controls.Add(this.lsvOrder);
+<<<<<<< HEAD
             this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Size = new System.Drawing.Size(1623, 1055);
             this.splitContainer1.SplitterDistance = 582;
             this.splitContainer1.SplitterWidth = 3;
+=======
+            this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(3);
+            this.splitContainer1.Size = new System.Drawing.Size(1217, 862);
+            this.splitContainer1.SplitterDistance = 401;
+            this.splitContainer1.SplitterWidth = 2;
+>>>>>>> 6ea14831c1d8d4ef7f35c7f686d75275a60b2df1
             this.splitContainer1.TabIndex = 0;
             // 
             // monAnLayoutPanel
@@ -89,6 +100,7 @@
             this.monAnLayoutPanel.Name = "monAnLayoutPanel";
             this.monAnLayoutPanel.Size = new System.Drawing.Size(695, 1198);
             this.monAnLayoutPanel.TabIndex = 2;
+            this.monAnLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.monAnLayoutPanel_Paint);
             // 
             // btnSearch
             // 
@@ -96,7 +108,11 @@
             this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlText;
+<<<<<<< HEAD
             this.btnSearch.Location = new System.Drawing.Point(855, 46);
+=======
+            this.btnSearch.Location = new System.Drawing.Point(406, 37);
+>>>>>>> 6ea14831c1d8d4ef7f35c7f686d75275a60b2df1
             this.btnSearch.Margin = new System.Windows.Forms.Padding(0);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(51, 37);
@@ -112,17 +128,28 @@
             this.txtSearch.Location = new System.Drawing.Point(9, 46);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.Name = "txtSearch";
+<<<<<<< HEAD
             this.txtSearch.Size = new System.Drawing.Size(533, 45);
+=======
+            this.txtSearch.Size = new System.Drawing.Size(398, 37);
+>>>>>>> 6ea14831c1d8d4ef7f35c7f686d75275a60b2df1
             this.txtSearch.TabIndex = 0;
             // 
             // btnDatBan
             // 
             this.btnDatBan.Enabled = false;
             this.btnDatBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnDatBan.Location = new System.Drawing.Point(662, 745);
             this.btnDatBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDatBan.Name = "btnDatBan";
             this.btnDatBan.Size = new System.Drawing.Size(173, 55);
+=======
+            this.btnDatBan.Location = new System.Drawing.Point(577, 605);
+            this.btnDatBan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDatBan.Name = "btnDatBan";
+            this.btnDatBan.Size = new System.Drawing.Size(130, 45);
+>>>>>>> 6ea14831c1d8d4ef7f35c7f686d75275a60b2df1
             this.btnDatBan.TabIndex = 4;
             this.btnDatBan.Text = "Đặt Bàn";
             this.btnDatBan.UseVisualStyleBackColor = true;
@@ -161,7 +188,11 @@
             this.txtTableNumber.Location = new System.Drawing.Point(307, 9);
             this.txtTableNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTableNumber.Name = "txtTableNumber";
+<<<<<<< HEAD
             this.txtTableNumber.Size = new System.Drawing.Size(521, 45);
+=======
+            this.txtTableNumber.Size = new System.Drawing.Size(427, 37);
+>>>>>>> 6ea14831c1d8d4ef7f35c7f686d75275a60b2df1
             this.txtTableNumber.TabIndex = 2;
             // 
             // label1
@@ -186,7 +217,11 @@
             this.txtTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
+<<<<<<< HEAD
             this.txtTotal.Size = new System.Drawing.Size(408, 45);
+=======
+            this.txtTotal.Size = new System.Drawing.Size(342, 37);
+>>>>>>> 6ea14831c1d8d4ef7f35c7f686d75275a60b2df1
             this.txtTotal.TabIndex = 2;
             // 
             // lblTotal
@@ -217,7 +252,11 @@
             this.lsvOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lsvOrder.MultiSelect = false;
             this.lsvOrder.Name = "lsvOrder";
+<<<<<<< HEAD
             this.lsvOrder.Size = new System.Drawing.Size(821, 534);
+=======
+            this.lsvOrder.Size = new System.Drawing.Size(652, 435);
+>>>>>>> 6ea14831c1d8d4ef7f35c7f686d75275a60b2df1
             this.lsvOrder.TabIndex = 0;
             this.lsvOrder.UseCompatibleStateImageBehavior = false;
             this.lsvOrder.View = System.Windows.Forms.View.Details;
@@ -245,7 +284,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1623, 1055);
             this.Controls.Add(this.splitContainer1);
+<<<<<<< HEAD
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> 6ea14831c1d8d4ef7f35c7f686d75275a60b2df1
             this.Name = "OrderForm";
             this.Text = "OrderForm";
             this.Load += new System.EventHandler(this.OrderForm_Load);

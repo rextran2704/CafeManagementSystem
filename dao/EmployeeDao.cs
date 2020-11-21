@@ -31,7 +31,7 @@ namespace CafeManagementSystem.dao
         {
             List<Employee> employeeList = new List<Employee>();
             Dao dao = new Dao();
-            string sqlStatement = "SELECT EmployeeID, Gender, Position, StartDate, Address, PhoneNumber From Employee WHERE EmployeeName LIKE N'%" + name + "%'";
+            string sqlStatement = "SELECT EmployeeID, Gender, Position, StartDate, Address, PhoneNumber,EmployeeName From Employee WHERE EmployeeName LIKE N'%" + name + "%'";
             System.Data.SqlClient.SqlDataReader reader = dao.Get(sqlStatement);
             while (reader.Read())
             {
@@ -41,7 +41,8 @@ namespace CafeManagementSystem.dao
                 DateTime date = reader.GetDateTime(3);
                 string address = reader.GetString(4);
                 string phone = reader.GetString(5);
-                employeeList.Add(new Employee(id, name, gender, position, date, address, phone));
+                string Name = reader.GetString(6);
+                employeeList.Add(new Employee(id, Name, gender, position, date, address, phone));
             }
             dao.Con.Close();
             return employeeList;
@@ -96,14 +97,15 @@ namespace CafeManagementSystem.dao
             {
                 int nRows;
                 Dao dao = new Dao();
-                string sqlStatement = "INSERT INTO Employee(EmployeeName, Gender, Position, StartDate, Address, PhoneNumber) VALUES (@name, @gender, @position, @date, @address, @phone)";
+                //string sqlStatement = "INSERT INTO Employee(EmployeeName, Gender, Position, StartDate, Address, PhoneNumber) VALUES (@name, @gender, @position, @date, @address, @phone)";
+                string sqlStatement = "INSERT INTO Employee(EmployeeName, Gender, Position, StartDate, Address, PhoneNumber) VALUES (@name, @gender, @position,GetDate(), @address, @phone)";
                 using (SqlCommand command = dao.Add(sqlStatement))
                 {
                     command.CommandText = sqlStatement;
                     command.Parameters.AddWithValue("@name", employee.EmployeeName);
                     command.Parameters.AddWithValue("@gender", employee.Gender);
                     command.Parameters.AddWithValue("@position", employee.Position);
-                    command.Parameters.AddWithValue("@date", employee.StartDate);
+                    //command.Parameters.AddWithValue("@date", employee.StartDate);
                     command.Parameters.AddWithValue("@address", employee.Address);
                     command.Parameters.AddWithValue("@phone", employee.PhoneNumber);
                     nRows = command.ExecuteNonQuery();
