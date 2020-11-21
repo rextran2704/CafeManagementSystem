@@ -153,7 +153,7 @@ namespace CafeManagementSystem
                     MessageBox.Show("thất bại rồi");
             }
             catch (Exception) {
-                MessageBox.Show("nhap so ban dung dinh dang");
+                MessageBox.Show("Nhập số bàn đúng định dạng");
             }
         }
 

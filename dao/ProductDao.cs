@@ -9,22 +9,35 @@ namespace CafeManagementSystem.dao
     {
         public Product GetProductByName(string Name)
         {
-            Product Product= null;
+            Product Product = null;
             Dao dao = new Dao();
             string sqlStatement = "SELECT ProductID, Price, Quantity, Image, Description, CategoryID FROM Product WHERE ProductName='" + Name + "'";
             System.Data.SqlClient.SqlDataReader reader = dao.Get(sqlStatement);
             if (reader.Read())
             {
                 int id = reader.GetInt32(0);
-                double price= (double)reader.GetDecimal(1);
-                int quantity= reader.GetInt32(2);
-                string image= reader.GetString(3);
-                string description= reader.GetString(4);
+                double price = (double)reader.GetDecimal(1);
+                int quantity = reader.GetInt32(2);
+                string image = reader.GetString(3);
+                string description = reader.GetString(4);
                 int categoryID = reader.GetInt32(5);
                 Product = new Product(id, Name, price, quantity, image, description, categoryID);
             }
             dao.Con.Close();
             return Product;
+        }
+        public string GetProductNameByID(int productId)
+        {
+            string name = "";
+            Dao dao = new Dao();
+            string sqlStatement = "SELECT ProductName FROM Product WHERE ProductID='" + productId + "'";
+            System.Data.SqlClient.SqlDataReader reader = dao.Get(sqlStatement);
+            if (reader.Read())
+            {
+                name = reader.GetString(0);
+            }
+            dao.Con.Close();
+            return name;
         }
         public List<Product> GetProductList()
         {
@@ -47,7 +60,9 @@ namespace CafeManagementSystem.dao
                     int categoryID = reader.GetInt32(6);
 
                     ProductList.Add(new Product(id, name, price, quantity, image, description, categoryID));
-                }catch (Exception) {
+                }
+                catch (Exception)
+                {
                 }
 
             }
@@ -58,7 +73,7 @@ namespace CafeManagementSystem.dao
         {
             List<Product> ProductList = new List<Product>();
             Dao dao = new Dao();
-            string sqlStatement = "SELECT ProductID, ProductName, Price, Quantity, Image, Description, CategoryID FROM Product where ProductName Like N'%"+searchvalue+"%'";
+            string sqlStatement = "SELECT ProductID, ProductName, Price, Quantity, Image, Description, CategoryID FROM Product where ProductName Like N'%" + searchvalue + "%'";
             System.Data.SqlClient.SqlDataReader reader = dao.Get(sqlStatement);
             if (reader == null) return null;
             while (reader.Read())
@@ -125,13 +140,13 @@ namespace CafeManagementSystem.dao
                     nRows = command.ExecuteNonQuery();
                 }
                 dao.Con.Close();
-                return nRows> 0;
+                return nRows > 0;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 return false;
-                
+
             }
         }
 

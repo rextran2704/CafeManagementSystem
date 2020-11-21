@@ -25,6 +25,28 @@ namespace CafeManagementSystem.dao
             dao.Con.Close();
             return Receipt;
         }
+
+        public List<Receipt> GetReceiptListByDate(string startDate, string endDate)
+        {
+            List<Receipt> ReceiptList = new List<Receipt>();
+            Dao dao = new Dao();
+            string sqlStatement = "SELECT ReceiptID, EmployeeID, TableNumber, PrintDate, Total, AdditionalFee FROM Receipt WHERE PrintDate <= " + "'" + endDate + "'" + " AND PrintDate >=" + "'" + startDate + "'";
+            System.Data.SqlClient.SqlDataReader reader = dao.Get(sqlStatement);
+            if (reader == null) return null;
+            while (reader.Read())
+            {
+                int reID = reader.GetInt32(0);
+                int emID = reader.GetInt32(1);
+                int tablenumber = reader.GetInt32(2);
+                DateTime date = reader.GetDateTime(3);
+                double total = (double)reader.GetDecimal(4);
+                double addFee = (double)reader.GetDecimal(5);
+                ReceiptList.Add(new Receipt(reID, emID, tablenumber, date, total, addFee));
+            }
+            dao.Con.Close();
+            return ReceiptList;
+        }
+
         public List<Receipt> GetReceiptList()
         {
             List<Receipt> ReceiptList = new List<Receipt>();

@@ -66,10 +66,12 @@ namespace CafeManagementSystem
                 AccountDao acDao = new AccountDao();
                 if (acDao.RemoveAccountByUsername(lsvAccount.SelectedItems[0].SubItems[1].Text))
                 {
-                    lsvAccount.Items.Remove(lsvAccount.SelectedItems[0]);
-                }
-                txtEmployeeId.Text = "";
-                txtUsername.Text = "";
+                    LoadTable();
+                    txtEmployeeId.Text = "";
+                    txtUsername.Text = "";
+                } else 
+                MessageBox.Show("Xóa thất bại");
+
             }
             else
                 MessageBox.Show("Bạn chưa chọn dòng để xóa");

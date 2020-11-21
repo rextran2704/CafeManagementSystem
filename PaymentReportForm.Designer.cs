@@ -43,8 +43,9 @@
             // 
             // lsvGeneralReport
             // 
-            this.lsvGeneralReport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lsvGeneralReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lsvGeneralReport.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colId,
             this.colDate,
@@ -58,7 +59,7 @@
             this.lsvGeneralReport.Location = new System.Drawing.Point(16, 153);
             this.lsvGeneralReport.Margin = new System.Windows.Forms.Padding(4);
             this.lsvGeneralReport.Name = "lsvGeneralReport";
-            this.lsvGeneralReport.Size = new System.Drawing.Size(1415, 662);
+            this.lsvGeneralReport.Size = new System.Drawing.Size(1427, 662);
             this.lsvGeneralReport.TabIndex = 15;
             this.lsvGeneralReport.UseCompatibleStateImageBehavior = false;
             this.lsvGeneralReport.View = System.Windows.Forms.View.Details;
@@ -97,7 +98,7 @@
             this.dtmEndDate.Name = "dtmEndDate";
             this.dtmEndDate.Size = new System.Drawing.Size(331, 38);
             this.dtmEndDate.TabIndex = 16;
-            this.dtmEndDate.Value = new System.DateTime(2020, 11, 18, 10, 39, 44, 0);
+            this.dtmEndDate.Value = new System.DateTime(2020, 11, 21, 23, 11, 24, 0);
             // 
             // dtmStartDate
             // 
