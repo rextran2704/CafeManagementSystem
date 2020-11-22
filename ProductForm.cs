@@ -86,7 +86,8 @@ namespace CafeManagementSystem
                 {
                     if (new ProductDao().RemoveProductByName(txtName.Text))
                     {
-                        loadProductsToSearch(new ProductDao().GetProductList());
+                        productList = new ProductDao().GetProductList();
+                        loadProductsToSearch(productList);
                     }
                 }
                 catch (Exception ex)
@@ -151,7 +152,8 @@ namespace CafeManagementSystem
                 {
                     if (new ProductDao().AddProduct(new Product(txtName.Text, Double.Parse(txtPrice.Text), Convert.ToInt32(txtQuantity.Text), txtImage.Text, txtDescription.Text, GetKeyByValueFromDictionary(cboCategory.SelectedIndex))))
                     {
-                        loadProductsToSearch(new ProductDao().GetProductList());
+                        productList = new ProductDao().GetProductList();
+                        loadProductsToSearch(productList);
                     }
                 }
                 catch (Exception ex)
@@ -164,6 +166,23 @@ namespace CafeManagementSystem
                 txtQuantity.Text = "";
                 txtDescription.Text = "";
             }
-        } 
+        }
+
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtQuantity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }
