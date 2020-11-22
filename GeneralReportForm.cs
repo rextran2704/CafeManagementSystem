@@ -17,6 +17,7 @@ namespace CafeManagementSystem
         public GeneralReportForm()
         {
             InitializeComponent();
+            byDay();
         }
 
 

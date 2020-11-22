@@ -50,7 +50,7 @@
             this.lsvGeneralReport.GridLines = true;
             this.lsvGeneralReport.HideSelection = false;
             this.lsvGeneralReport.Location = new System.Drawing.Point(16, 162);
-            this.lsvGeneralReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lsvGeneralReport.Margin = new System.Windows.Forms.Padding(4);
             this.lsvGeneralReport.Name = "lsvGeneralReport";
             this.lsvGeneralReport.Size = new System.Drawing.Size(1415, 653);
             this.lsvGeneralReport.TabIndex = 1;
@@ -79,14 +79,16 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.IntegralHeight = false;
             this.comboBox1.Items.AddRange(new object[] {
             "Ngày",
             "Tháng",
             "Năm"});
             this.comboBox1.Location = new System.Drawing.Point(212, 66);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(273, 47);
             this.comboBox1.TabIndex = 2;
@@ -99,7 +101,7 @@
             this.ClientSize = new System.Drawing.Size(1448, 831);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lsvGeneralReport);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GeneralReportForm";
             this.Text = "GeneralReportForm";
             this.ResumeLayout(false);

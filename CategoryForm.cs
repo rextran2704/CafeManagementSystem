@@ -96,6 +96,10 @@ namespace CafeManagementSystem
             {
                 MessageBox.Show("Please choose the item to delete");
             }
+            else if (txtName.Text=="")
+            {
+                MessageBox.Show("Please enter name to delete");
+            }
             else
             {
                 if (cd.RemoveCategory(txtName.Text))
