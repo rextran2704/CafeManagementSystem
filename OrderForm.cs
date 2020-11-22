@@ -127,14 +127,14 @@ namespace CafeManagementSystem
         private void btnDatBan_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(txtTotal.Text) && string.IsNullOrEmpty(txtTableNumber.Text)) {
-                MessageBox.Show("Vui lòng điền số bàn và chọn sản phẩm và nhấn tính tiền!");
+            if (string.IsNullOrEmpty(txtTotal.Text) || string.IsNullOrEmpty(txtTableNumber.Text)) {
+                MessageBox.Show("Vui lòng điền số bàn và chọn sản phẩm ");
                 return;
             }
             double total = double.Parse(txtTotal.Text);
 
             if (total<=0) {
-                MessageBox.Show("Vui lòng chọn sản phẩm và nhấn tính tiền");
+                MessageBox.Show("Vui lòng chọn sản phẩm ");
                 return;
             }
             try
@@ -148,6 +148,10 @@ namespace CafeManagementSystem
                     }
 
                     MessageBox.Show("Đặt Bàn Thành Công");
+                    lsvOrder.Items.Clear() ;
+                    txtTableNumber.Text = "";
+                    txtTotal.Text = "";
+                    btnDatBan.Enabled = false;
                 }
                 else
                     MessageBox.Show("thất bại rồi");
