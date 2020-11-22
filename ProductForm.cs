@@ -123,7 +123,8 @@ namespace CafeManagementSystem
                 {
                     if (new ProductDao().UpdateProduct(new Product(txtName.Text, Double.Parse(txtPrice.Text), Convert.ToInt32(txtQuantity.Text), txtImage.Text, txtDescription.Text, GetKeyByValueFromDictionary(cboCategory.SelectedIndex))))
                     {
-                        loadProductsToSearch(new ProductDao().GetProductList());
+                        productList = new ProductDao().GetProductList();
+                        loadProductsToSearch(productList);
                     }
                 }
                 catch (Exception ex)
