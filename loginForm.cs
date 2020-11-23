@@ -33,7 +33,8 @@ namespace CafeManagementSystem
                 label3.Text = "Vui Long Nhap Day Du Thong tin";
                 return;
             }
-            if (form.Login(txtUsername.Text, txtPassword.Text)){
+            if (form.Login(txtUsername.Text, txtPassword.Text))
+            {
                 txtUsername.Text = "";
                 txtPassword.Text = "";
             }

@@ -27,7 +27,35 @@ namespace CafeManagementSystem
             dashboardToolStripMenuItem.Enabled = false;
             openChildForm(new loginForm(this));
             ResetUserLogin();
+            Logout();
 
+        }
+        private void Logout()
+        {
+            accountToolStripMenuItem.Enabled = false;
+            employeeToolStripMenuItem.Enabled = false;
+            productToolStripMenuItem.Enabled = false;
+            categoryToolStripMenuItem.Enabled = false;
+            reportToolStripMenuItem.Enabled = false;
+            orderToolStripMenuItem.Enabled = false;
+        }
+        private void PhanQuyenAdmin()
+        {
+            accountToolStripMenuItem.Enabled = true;
+            employeeToolStripMenuItem.Enabled = true;
+            productToolStripMenuItem.Enabled = true;
+            categoryToolStripMenuItem.Enabled = true;
+            reportToolStripMenuItem.Enabled = true;
+            orderToolStripMenuItem.Enabled = true;
+        }
+        private void PhanQuyenNhanVien()
+        {
+            accountToolStripMenuItem.Enabled = false;
+            employeeToolStripMenuItem.Enabled = false;
+            productToolStripMenuItem.Enabled = false;
+            categoryToolStripMenuItem.Enabled = false;
+            reportToolStripMenuItem.Enabled = false;
+            orderToolStripMenuItem.Enabled = true;
         }
 
         private void Mi_Click(object sender, EventArgs e)
@@ -48,7 +76,8 @@ namespace CafeManagementSystem
 
 
 
-        void openChildForm(Form orderForm){
+        void openChildForm(Form orderForm)
+        {
             this.mainPanel.Controls.Clear();
             orderForm.TopLevel = false;
             orderForm.AutoScroll = true;
@@ -57,7 +86,7 @@ namespace CafeManagementSystem
             orderForm.Dock = DockStyle.Fill;
             orderForm.Show();
         }
-        public bool Login(string username,string password)
+        public bool Login(string username, string password)
         {
             //MessageBox.Show("Login Action");
             AccountDao AcDAO = new AccountDao();
@@ -71,15 +100,20 @@ namespace CafeManagementSystem
                 this.mainPanel.Controls.Clear();
 
                 ResetUserLogin();
+                int userRole = User.UserRole;
+                if (userRole == 1) PhanQuyenNhanVien();
+                else if (userRole == 2) PhanQuyenAdmin();
                 return true;
 
             }
-            else {
-            MessageBox.Show("LoginFailed");
+            else
+            {
+                MessageBox.Show("LoginFailed");
                 return false;
             }
         }
-         void ResetUserLogin() {
+        void ResetUserLogin()
+        {
             if (User != null)
             {
                 welcomeToolStripMenuItem.DropDownItems.Clear();
@@ -92,7 +126,8 @@ namespace CafeManagementSystem
                 mi2.Click += đăngXuấtToolStripMenuItem_Click;
                 welcomeToolStripMenuItem.DropDownItems.Add(mi2);
             }
-            else {
+            else
+            {
                 welcomeToolStripMenuItem.DropDownItems.Clear();
 
                 ToolStripMenuItem mi = new ToolStripMenuItem("Đăng Nhập");
@@ -119,6 +154,7 @@ namespace CafeManagementSystem
             User = null;
             welcomeToolStripMenuItem.Text = "Xin Chào";
             ResetUserLogin();
+            Logout();
             // Chuyển về form đăng nhập
         }
 
