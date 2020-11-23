@@ -134,7 +134,7 @@
             this.btnConfirm.Location = new System.Drawing.Point(619, 43);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(179, 60);
-            this.btnConfirm.TabIndex = 23;
+            this.btnConfirm.TabIndex = 3;
             this.btnConfirm.Text = "   Tìm kiếm";
             this.btnConfirm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConfirm.UseVisualStyleBackColor = true;
@@ -167,7 +167,7 @@
             this.dtmStartDate.Location = new System.Drawing.Point(240, 28);
             this.dtmStartDate.Name = "dtmStartDate";
             this.dtmStartDate.Size = new System.Drawing.Size(331, 38);
-            this.dtmStartDate.TabIndex = 19;
+            this.dtmStartDate.TabIndex = 1;
             this.dtmStartDate.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             // 
             // dtmEndDate
@@ -177,7 +177,7 @@
             this.dtmEndDate.Location = new System.Drawing.Point(240, 86);
             this.dtmEndDate.Name = "dtmEndDate";
             this.dtmEndDate.Size = new System.Drawing.Size(331, 38);
-            this.dtmEndDate.TabIndex = 20;
+            this.dtmEndDate.TabIndex = 2;
             this.dtmEndDate.Value = new System.DateTime(2020, 11, 21, 23, 10, 38, 0);
             // 
             // IncomeReportForm

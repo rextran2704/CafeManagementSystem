@@ -97,7 +97,7 @@
             this.dtmEndDate.Location = new System.Drawing.Point(229, 89);
             this.dtmEndDate.Name = "dtmEndDate";
             this.dtmEndDate.Size = new System.Drawing.Size(331, 38);
-            this.dtmEndDate.TabIndex = 16;
+            this.dtmEndDate.TabIndex = 2;
             this.dtmEndDate.Value = new System.DateTime(2020, 11, 21, 23, 11, 24, 0);
             // 
             // dtmStartDate
@@ -107,7 +107,7 @@
             this.dtmStartDate.Location = new System.Drawing.Point(229, 31);
             this.dtmStartDate.Name = "dtmStartDate";
             this.dtmStartDate.Size = new System.Drawing.Size(331, 38);
-            this.dtmStartDate.TabIndex = 16;
+            this.dtmStartDate.TabIndex = 1;
             this.dtmStartDate.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             // 
             // label1
@@ -142,7 +142,7 @@
             this.btnConfirm.Location = new System.Drawing.Point(608, 46);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(179, 60);
-            this.btnConfirm.TabIndex = 18;
+            this.btnConfirm.TabIndex = 3;
             this.btnConfirm.Text = "   Tìm kiếm";
             this.btnConfirm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConfirm.UseVisualStyleBackColor = true;

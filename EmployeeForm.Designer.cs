@@ -100,7 +100,7 @@
             this.btnSearch.MaximumSize = new System.Drawing.Size(52, 46);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(52, 37);
-            this.btnSearch.TabIndex = 5;
+            this.btnSearch.TabIndex = 11;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -112,15 +112,15 @@
             this.txtSearch.Location = new System.Drawing.Point(12, 79);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(515, 37);
-            this.txtSearch.TabIndex = 4;
+            this.txtSearch.Size = new System.Drawing.Size(515, 45);
+            this.txtSearch.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(666, 240);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 31);
+            this.label1.Size = new System.Drawing.Size(223, 38);
             this.label1.TabIndex = 6;
             this.label1.Text = "Tên nhân viên";
             // 
@@ -129,7 +129,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(666, 306);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 31);
+            this.label2.Size = new System.Drawing.Size(136, 38);
             this.label2.TabIndex = 6;
             this.label2.Text = "Giới tính";
             // 
@@ -138,7 +138,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(666, 367);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 31);
+            this.label3.Size = new System.Drawing.Size(82, 38);
             this.label3.TabIndex = 6;
             this.label3.Text = "Vị trí";
             // 
@@ -147,7 +147,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(666, 492);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 31);
+            this.label4.Size = new System.Drawing.Size(117, 38);
             this.label4.TabIndex = 6;
             this.label4.Text = "Địa chỉ";
             // 
@@ -156,7 +156,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(666, 558);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(171, 31);
+            this.label5.Size = new System.Drawing.Size(206, 38);
             this.label5.TabIndex = 6;
             this.label5.Text = "Số điện thoại";
             // 
@@ -164,29 +164,29 @@
             // 
             this.txtName.Location = new System.Drawing.Point(857, 240);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(265, 37);
-            this.txtName.TabIndex = 7;
+            this.txtName.Size = new System.Drawing.Size(265, 45);
+            this.txtName.TabIndex = 1;
             // 
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(857, 489);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(265, 37);
-            this.txtAddress.TabIndex = 7;
+            this.txtAddress.Size = new System.Drawing.Size(265, 45);
+            this.txtAddress.TabIndex = 5;
             // 
             // txtPosition
             // 
             this.txtPosition.Location = new System.Drawing.Point(857, 364);
             this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(265, 37);
-            this.txtPosition.TabIndex = 7;
+            this.txtPosition.Size = new System.Drawing.Size(265, 45);
+            this.txtPosition.TabIndex = 3;
             // 
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.Location = new System.Drawing.Point(857, 555);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(265, 37);
-            this.txtPhoneNumber.TabIndex = 7;
+            this.txtPhoneNumber.Size = new System.Drawing.Size(265, 45);
+            this.txtPhoneNumber.TabIndex = 6;
             this.txtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNumber_KeyPress);
             // 
             // cboGender
@@ -194,8 +194,8 @@
             this.cboGender.FormattingEnabled = true;
             this.cboGender.Location = new System.Drawing.Point(857, 303);
             this.cboGender.Name = "cboGender";
-            this.cboGender.Size = new System.Drawing.Size(265, 38);
-            this.cboGender.TabIndex = 8;
+            this.cboGender.Size = new System.Drawing.Size(265, 46);
+            this.cboGender.TabIndex = 2;
             // 
             // btnDelete
             // 
@@ -216,7 +216,7 @@
             this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(108, 45);
-            this.btnEdit.TabIndex = 10;
+            this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -228,7 +228,7 @@
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(108, 45);
-            this.btnAdd.TabIndex = 11;
+            this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -238,7 +238,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(666, 429);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(175, 31);
+            this.label6.Size = new System.Drawing.Size(211, 38);
             this.label6.TabIndex = 6;
             this.label6.Text = "Ngày bắt đầu";
             // 
@@ -247,13 +247,13 @@
             this.txtStartDate.Location = new System.Drawing.Point(857, 426);
             this.txtStartDate.Name = "txtStartDate";
             this.txtStartDate.ReadOnly = true;
-            this.txtStartDate.Size = new System.Drawing.Size(265, 37);
-            this.txtStartDate.TabIndex = 7;
+            this.txtStartDate.Size = new System.Drawing.Size(265, 45);
+            this.txtStartDate.TabIndex = 4;
             this.txtStartDate.TextChanged += new System.EventHandler(this.txtStartDate_TextChanged);
             // 
             // EmployeeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 38F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1444, 845);
             this.Controls.Add(this.btnDelete);

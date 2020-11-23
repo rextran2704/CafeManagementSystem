@@ -101,7 +101,7 @@
             this.btnSearch.MaximumSize = new System.Drawing.Size(52, 46);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(52, 37);
-            this.btnSearch.TabIndex = 5;
+            this.btnSearch.TabIndex = 8;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -113,15 +113,15 @@
             this.txtSearch.Location = new System.Drawing.Point(12, 79);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(515, 37);
-            this.txtSearch.TabIndex = 4;
+            this.txtSearch.Size = new System.Drawing.Size(515, 45);
+            this.txtSearch.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(666, 240);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 31);
+            this.label1.Size = new System.Drawing.Size(235, 38);
             this.label1.TabIndex = 6;
             this.label1.Text = "Tên đăng nhập";
             // 
@@ -130,7 +130,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(666, 306);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 31);
+            this.label2.Size = new System.Drawing.Size(114, 38);
             this.label2.TabIndex = 6;
             this.label2.Text = "Quyền";
             // 
@@ -139,7 +139,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(666, 367);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(175, 31);
+            this.label3.Size = new System.Drawing.Size(212, 38);
             this.label3.TabIndex = 6;
             this.label3.Text = "Mã nhân viên";
             // 
@@ -147,15 +147,15 @@
             // 
             this.txtUsername.Location = new System.Drawing.Point(857, 240);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(265, 37);
-            this.txtUsername.TabIndex = 7;
+            this.txtUsername.Size = new System.Drawing.Size(265, 45);
+            this.txtUsername.TabIndex = 1;
             // 
             // txtEmployeeId
             // 
             this.txtEmployeeId.Location = new System.Drawing.Point(857, 364);
             this.txtEmployeeId.Name = "txtEmployeeId";
-            this.txtEmployeeId.Size = new System.Drawing.Size(265, 37);
-            this.txtEmployeeId.TabIndex = 7;
+            this.txtEmployeeId.Size = new System.Drawing.Size(265, 45);
+            this.txtEmployeeId.TabIndex = 3;
             this.txtEmployeeId.TextChanged += new System.EventHandler(this.txtEmployeeId_TextChanged);
             this.txtEmployeeId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmployeeId_KeyPress);
             // 
@@ -164,8 +164,8 @@
             this.cboRole.FormattingEnabled = true;
             this.cboRole.Location = new System.Drawing.Point(857, 303);
             this.cboRole.Name = "cboRole";
-            this.cboRole.Size = new System.Drawing.Size(265, 38);
-            this.cboRole.TabIndex = 8;
+            this.cboRole.Size = new System.Drawing.Size(265, 46);
+            this.cboRole.TabIndex = 2;
             this.cboRole.SelectedIndexChanged += new System.EventHandler(this.cboRole_SelectedIndexChanged);
             // 
             // btnDelete
@@ -175,7 +175,7 @@
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(108, 45);
-            this.btnDelete.TabIndex = 9;
+            this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -187,7 +187,7 @@
             this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(108, 45);
-            this.btnEdit.TabIndex = 10;
+            this.btnEdit.TabIndex = 5;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -199,14 +199,14 @@
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(108, 45);
-            this.btnAdd.TabIndex = 11;
+            this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // AccountForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 38F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1444, 845);
             this.Controls.Add(this.btnDelete);

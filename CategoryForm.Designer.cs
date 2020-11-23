@@ -52,7 +52,7 @@
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(523, 45);
-            this.txtSearch.TabIndex = 2;
+            this.txtSearch.TabIndex = 6;
             // 
             // txtId
             // 
@@ -64,7 +64,7 @@
             this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(361, 45);
-            this.txtId.TabIndex = 5;
+            this.txtId.TabIndex = 1;
             this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
@@ -89,7 +89,7 @@
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(361, 45);
-            this.txtName.TabIndex = 5;
+            this.txtName.TabIndex = 2;
             // 
             // label2
             // 
@@ -111,7 +111,7 @@
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(144, 55);
-            this.btnAdd.TabIndex = 8;
+            this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -124,7 +124,7 @@
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(144, 55);
-            this.btnEdit.TabIndex = 8;
+            this.btnEdit.TabIndex = 4;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -137,7 +137,7 @@
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(144, 55);
-            this.btnDelete.TabIndex = 8;
+            this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -151,7 +151,7 @@
             this.btnSearch.Margin = new System.Windows.Forms.Padding(0);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(67, 46);
-            this.btnSearch.TabIndex = 3;
+            this.btnSearch.TabIndex = 7;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
