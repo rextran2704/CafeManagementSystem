@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,16 +15,25 @@ namespace CafeManagementSystem
 {
     public partial class OrderForm : Form
     {
+        Account cUser = null;
         Dictionary<Product, int> productsMap = new Dictionary<Product, int>();
         List<Product> productList = new List<Product>();
-
+        internal OrderForm(Account user)
+        {
+            cUser = user;
+            InitializeComponent();
+        }
         public OrderForm()
         {
             InitializeComponent();
         }
+
         Button customButton(string image, string text) {
             Button button3 = new Button();
-            button3.Image = Image.FromFile("../../images/icon-account.png");
+            if (string.IsNullOrEmpty(image) || !File.Exists(image))
+                button3.Image = Image.FromFile("../../images/icon-account.png");
+            else
+                button3.Image = Image.FromFile(image);
             button3.Location = new System.Drawing.Point(2, 171);
             button3.Margin = new System.Windows.Forms.Padding(2);
             //button3.Name = "button3";
@@ -74,7 +84,7 @@ namespace CafeManagementSystem
             if (products.Count<= 0) return;
             foreach (Product item in products)
             {
-                monAnLayoutPanel.Controls.Add(customButton("", item.ProductName));
+                monAnLayoutPanel.Controls.Add(customButton(item.Image, item.ProductName));
             }
         }
         private void OrderForm_Load(object sender, EventArgs e)
@@ -139,7 +149,7 @@ namespace CafeManagementSystem
             }
             try
             {
-                int index = new ReceiptDao().AddReceipt(new Receipt(1, int.Parse(txtTableNumber.Text), new DateTime().Date, total, 0));
+                int index = new ReceiptDao().AddReceipt(new Receipt(cUser.EmployeeId, int.Parse(txtTableNumber.Text), new DateTime().Date, total, 0));
                 if (index > 0)
                 {
                     foreach (var myitem in productsMap)

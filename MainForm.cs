@@ -141,7 +141,7 @@ namespace CafeManagementSystem
 
         private void orderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openChildForm(new OrderForm());
+            openChildForm(new OrderForm(User));
         }
 
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)

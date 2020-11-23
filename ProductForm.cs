@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +25,11 @@ namespace CafeManagementSystem
         }
         Button customButton(string image, string text) {
             Button button3 = new Button();
-            button3.Image = Image.FromFile("../../images/icon-account.png");
+            if(string.IsNullOrEmpty(image)||!File.Exists(image))
+                button3.Image = Image.FromFile("../../images/icon-account.png");
+            else
+                button3.Image = Image.FromFile(image);
+
             button3.Location = new System.Drawing.Point(2, 171);
             button3.Margin = new System.Windows.Forms.Padding(2);
             //button3.Name = "button3";
@@ -55,7 +60,7 @@ namespace CafeManagementSystem
             if (products.Count <= 0) return;
             foreach (Product item in products)
             {
-                monAnLayoutPanel.Controls.Add(customButton("", item.ProductName));
+                monAnLayoutPanel.Controls.Add(customButton(item.Image, item.ProductName));
 
             }
         }

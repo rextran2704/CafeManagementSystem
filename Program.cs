@@ -2,6 +2,7 @@
 using CafeManagementSystem.model;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,7 +19,9 @@ namespace CafeManagementSystem
         {
              Application.EnableVisualStyles();
              Application.SetCompatibleTextRenderingDefault(false);
-             Application.Run(new MainForm());
+
+            Application.Run(new MainForm());
+
             //List<Account> ls = AccountDao.GetAccountList();
             //Console.WriteLine(ls.Count());
         }
