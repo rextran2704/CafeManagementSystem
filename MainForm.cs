@@ -20,11 +20,12 @@ namespace CafeManagementSystem
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            
             this.TopMost = false;
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             dashboardToolStripMenuItem.Enabled = false;
+            menuStrip1.Visible = false;
             openChildForm(new loginForm(this));
             ResetUserLogin();
             Logout();
@@ -41,6 +42,7 @@ namespace CafeManagementSystem
         }
         private void PhanQuyenAdmin()
         {
+            menuStrip1.Visible = true;
             accountToolStripMenuItem.Enabled = true;
             employeeToolStripMenuItem.Enabled = true;
             productToolStripMenuItem.Enabled = true;
@@ -50,11 +52,13 @@ namespace CafeManagementSystem
         }
         private void PhanQuyenNhanVien()
         {
-            accountToolStripMenuItem.Enabled = false;
-            employeeToolStripMenuItem.Enabled = false;
-            productToolStripMenuItem.Enabled = false;
-            categoryToolStripMenuItem.Enabled = false;
-            reportToolStripMenuItem.Enabled = false;
+            menuStrip1.Visible = true;
+            accountToolStripMenuItem.Visible = false;
+            employeeToolStripMenuItem.Visible = false;
+            productToolStripMenuItem.Visible = false;
+            categoryToolStripMenuItem.Visible = false;
+            reportToolStripMenuItem.Visible = false;
+            orderToolStripMenuItem.Visible = true;
             orderToolStripMenuItem.Enabled = true;
         }
 
