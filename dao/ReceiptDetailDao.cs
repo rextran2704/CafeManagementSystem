@@ -11,7 +11,7 @@ namespace CafeManagementSystem.dao
         {
             List<ReceiptDetail> receiptDetailList = new List<ReceiptDetail>();
             Dao dao = new Dao();
-            string sqlStatement = "SELECT ProductID, Quantity, Total FROM ReceiptDetail WHERE ReceiptID='" + receiptId + "'";
+            string sqlStatement = "SELECT ProductID, Quantity, Total FROM ReceiptDetails WHERE ReceiptID='" + receiptId + "'";
             System.Data.SqlClient.SqlDataReader reader = dao.Get(sqlStatement);
             while (reader.Read())
             {
@@ -27,7 +27,7 @@ namespace CafeManagementSystem.dao
         {
             List<ReceiptDetail> receiptDetailList = new List<ReceiptDetail>();
             Dao dao = new Dao();
-            string sqlStatement = "SELECT ReceiptID, ProductID, Quantity, Total FROM ReceiptDetail";
+            string sqlStatement = "SELECT ReceiptID, ProductID, Quantity, Total FROM ReceiptDetails";
             System.Data.SqlClient.SqlDataReader reader = dao.Get(sqlStatement);
             if (reader == null) return null;
             while (reader.Read())
@@ -46,7 +46,7 @@ namespace CafeManagementSystem.dao
         {
             int nRows;
             Dao dao = new Dao();
-            string sqlStatement = "INSERT INTO ReceiptDetail(ReceiptID,ProductID, Quantity, Total) VALUES (@receiptID,@productID, @quantity, @total)";
+            string sqlStatement = "INSERT INTO ReceiptDetails(ReceiptID,ProductID, Quantity, Total) VALUES (@receiptID,@productID, @quantity, @total)";
             using (SqlCommand command = dao.Add(sqlStatement))
             {
                 command.CommandText = sqlStatement;

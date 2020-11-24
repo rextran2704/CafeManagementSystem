@@ -166,8 +166,8 @@ namespace CafeManagementSystem
                 else
                     MessageBox.Show("thất bại rồi");
             }
-            catch (Exception) {
-                MessageBox.Show("Nhập số bàn đúng định dạng");
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -177,6 +177,11 @@ namespace CafeManagementSystem
         }
 
         private void monAnLayoutPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtTableNumber_TextChanged(object sender, EventArgs e)
         {
 
         }
